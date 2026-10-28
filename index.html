@@ -1,0 +1,3637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>AVENZA TEXTILES</title>
+
+    <meta name="description"
+        content="Discover premium sarees from AVENZA TEXTILES including Kanchipuram Silk, Banarasi, Organza, Cotton and Linen collections.">
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- OWL CAROUSEL -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="hero section.css">
+    <link rel="stylesheet" href="review.css">
+
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+     AVENZA TEXTILES — ONE TIME LOADING SCREEN
+===================================================== -->
+
+    <div class="loading-screen" id="loadingScreen">
+
+        <div class="gold-line-top"></div>
+        <div class="gold-line-bottom"></div>
+
+        <!-- DECORATIVE CORNERS -->
+        <div class="corner corner-one"></div>
+        <div class="corner corner-two"></div>
+        <div class="corner corner-three"></div>
+        <div class="corner corner-four"></div>
+
+        <!-- BRAND -->
+        <div class="brand-area">
+
+            <div class="brand-small">
+                PREMIUM TEXTILE COLLECTION
+            </div>
+
+            <div class="brand-name">
+                AVENZA
+            </div>
+
+            <div class="brand-subname">
+                TEXTILES
+            </div>
+
+            <div class="brand-line"></div>
+
+            <div class="brand-tagline">
+                WOVEN WITH ELEGANCE
+            </div>
+
+            <div class="loading-number">
+                <span id="loadingNumber">0</span>%
+            </div>
+
+        </div>
+
+        <!-- CURTAINS -->
+        <div class="curtain-wrapper">
+
+            <div class="curtain left-curtain">
+                <div class="tie"></div>
+            </div>
+
+            <div class="curtain right-curtain">
+                <div class="tie"></div>
+            </div>
+
+        </div>
+
+        <!-- PROGRESS -->
+        <div class="progress-area">
+
+            <div class="progress-track">
+                <div class="progress-bar"></div>
+            </div>
+
+            <div class="progress-info">
+
+                <span>
+                    Preparing Collection
+                </span>
+
+                <span>
+                    <span id="progressNumber">0</span>%
+                </span>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+
+
+    <script>
+        /* =========================================================
+           AVENZA — ONE TIME LOADING SCREEN
+        ========================================================= */
+
+        (function () {
+
+            const loadingScreen =
+                document.getElementById("loadingScreen");
+
+            const loadingNumber =
+                document.getElementById("loadingNumber");
+
+            const progressNumber =
+                document.getElementById("progressNumber");
+
+
+            /* =====================================================
+               CHECK SESSION
+               Loading screen appears only once per browser session
+            ===================================================== */
+
+            if (sessionStorage.getItem("avenzaLoadingShown") === "true") {
+
+                if (loadingScreen) {
+                    loadingScreen.remove();
+                }
+
+                document.body.style.overflow = "";
+
+                return;
+            }
+
+
+            /* =====================================================
+               SHOW LOADING SCREEN
+            ===================================================== */
+
+            document.body.style.overflow = "hidden";
+
+
+            let number = 0;
+
+            const counter = setInterval(function () {
+
+                number++;
+
+                if (loadingNumber) {
+                    loadingNumber.textContent = number;
+                }
+
+                if (progressNumber) {
+                    progressNumber.textContent = number;
+                }
+
+
+                if (number >= 100) {
+
+                    clearInterval(counter);
+
+                }
+
+            }, 44);
+
+
+            /* =====================================================
+               REMOVE AFTER CURTAIN ANIMATION
+            ===================================================== */
+
+            setTimeout(function () {
+
+                sessionStorage.setItem(
+                    "avenzaLoadingShown",
+                    "true"
+                );
+
+
+                if (loadingScreen) {
+
+                    loadingScreen.style.opacity = "0";
+
+                    loadingScreen.style.transition =
+                        "opacity .6s ease";
+
+                    setTimeout(function () {
+
+                        loadingScreen.remove();
+
+                        document.body.style.overflow = "";
+
+                    }, 600);
+
+                }
+
+            }, 4700);
+
+
+        })();
+    </script>
+    <!-- =========================================================
+     TOP BAR
+========================================================= -->
+
+    <div class="top-bar">
+        ✦ FREE SHIPPING ON ORDERS ABOVE ₹1,999 &nbsp; • &nbsp; HANDPICKED SAREES FOR EVERY OCCASION ✦
+    </div>
+
+
+
+    <!-- =========================================================
+     NAVBAR
+    ========================================================= -->
+
+    <header class="navbar">
+
+        <div class="nav-inner container">
+
+
+            <!-- BRAND -->
+
+            <a href="index.html" class="brand">
+
+                <div class="brand-mark">
+                    A
+                </div>
+
+                <div class="brand-text">
+
+                    <strong>
+                        AVENZA
+                    </strong>
+
+                    <span>
+                        TEXTILES
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <!-- NAVIGATION -->
+
+            <nav class="nav-links" id="mobileNav">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="#new-arrivals">
+                    New Arrivals
+                </a>
+
+                <a href="#best-selling">
+                    Best Selling
+                </a>
+
+                <a href="catelog.html">
+                    Collections
+                </a>
+
+                <a href="about.html">
+                    About Us
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </nav>
+
+
+            <!-- RIGHT SIDE -->
+
+            <div class="nav-icons">
+
+
+
+                <!-- ACCOUNT -->
+
+                <a href="#" class="nav-icon" aria-label="Account" onclick="openAccount(event)">
+
+                    <i class="fa-regular fa-user"></i>
+
+                </a>
+
+
+                <div class="account-overlay" id="accountOverlay">
+
+                    <div class="account-modal">
+
+                        <!-- CLOSE BUTTON -->
+                        <button class="account-close" onclick="closeAccount()" aria-label="Close Account">
+
+                            <i class="fa-solid fa-xmark"></i>
+
+                        </button>
+
+
+                        <!-- ACCOUNT ICON -->
+                        <div class="account-icon">
+
+                            <i class="fa-regular fa-user"></i>
+
+                        </div>
+
+
+                        <!-- CONTENT -->
+                        <div class="account-content">
+
+                            <span class="account-label">
+                                WELCOME BACK
+                            </span>
+
+                            <h2>
+                                My Account
+                            </h2>
+
+                            <p>
+                                Sign in to manage your orders,
+                                wishlist and personal details.
+                            </p>
+
+
+                            <!-- LOGIN -->
+                            <a href="#" class="account-btn account-login">
+
+                                <i class="fa-solid fa-arrow-right-to-bracket"></i>
+
+                                Sign In
+
+                            </a>
+
+
+                            <!-- REGISTER -->
+                            <a href="#" class="account-btn account-register">
+
+                                Create an Account
+
+                            </a>
+
+
+                            <!-- EXTRA LINKS -->
+                            <div class="account-links">
+
+                                <a href="#">
+                                    <i class="fa-solid fa-box"></i>
+                                    My Orders
+                                </a>
+
+                                <a href="#">
+                                    <i class="fa-regular fa-heart"></i>
+                                    Wishlist
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <style>
+                    .account-overlay {
+                        position: fixed;
+
+                        inset: 0;
+
+                        width: 100%;
+                        height: 100dvh;
+
+                        background: rgba(20, 16, 13, 0.72);
+
+                        backdrop-filter: blur(10px);
+                        -webkit-backdrop-filter: blur(10px);
+
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        padding: 20px;
+
+                        opacity: 0;
+                        visibility: hidden;
+                        pointer-events: none;
+
+                        transition:
+                            opacity .35s ease,
+                            visibility .35s ease;
+
+                        z-index: 99999;
+                    }
+
+
+                    /* OPEN */
+
+                    .account-overlay.active {
+                        opacity: 1;
+
+                        visibility: visible;
+
+                        pointer-events: auto;
+                    }
+
+
+
+                    .account-modal {
+                        position: relative;
+
+                        width: 100%;
+                        max-width: 430px;
+
+                        background: #ffffff;
+
+                        padding: 45px 40px 40px;
+
+                        border-radius: 20px;
+
+                        text-align: center;
+
+                        box-shadow:
+                            0 30px 80px rgba(0, 0, 0, .30);
+
+                        transform: translateY(35px) scale(.96);
+
+                        transition: transform .35s ease;
+                    }
+
+                    .account-overlay.active .account-modal {
+                        transform: translateY(0) scale(1);
+                    }
+
+
+
+                    .account-close {
+                        position: absolute;
+
+                        top: 15px;
+                        right: 15px;
+
+                        width: 40px;
+                        height: 40px;
+
+                        border: none;
+
+                        border-radius: 50%;
+
+                        background: #f4f1ed;
+
+                        color: #211b18;
+
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        cursor: pointer;
+
+                        font-size: 17px;
+
+                        transition: .3s ease;
+                    }
+
+                    .account-close:hover {
+                        background: #211b18;
+
+                        color: #ffffff;
+
+                        transform: rotate(90deg);
+                    }
+
+
+
+
+                    .account-icon {
+                        width: 68px;
+                        height: 68px;
+
+                        margin: 0 auto 20px;
+
+                        border-radius: 50%;
+
+                        background: #f5f1eb;
+
+                        color: #9b6b3d;
+
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        font-size: 25px;
+                    }
+
+
+
+                    .account-label {
+                        display: block;
+
+                        margin-bottom: 10px;
+
+                        color: #9b6b3d;
+
+                        font-size: 11px;
+
+                        font-weight: 600;
+
+                        letter-spacing: 3px;
+                    }
+
+                    .account-content h2 {
+                        margin: 0 0 10px;
+
+                        color: #211b18;
+
+                        font-size: 32px;
+
+                        font-weight: 500;
+                    }
+
+                    .account-content p {
+                        margin: 0 auto 28px;
+
+                        max-width: 330px;
+
+                        color: #777;
+
+                        font-size: 14px;
+
+                        line-height: 1.7;
+                    }
+
+
+
+                    .account-btn {
+                        width: 100%;
+
+                        min-height: 52px;
+
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        gap: 10px;
+
+                        margin-bottom: 12px;
+
+                        border-radius: 8px;
+
+                        text-decoration: none;
+
+                        font-size: 14px;
+
+                        transition: .3s ease;
+                    }
+
+
+                    /* LOGIN */
+
+                    .account-login {
+                        background: #211b18;
+
+                        color: #ffffff;
+                    }
+
+                    .account-login:hover {
+                        background: #9b6b3d;
+
+                        color: #ffffff;
+
+                        transform: translateY(-2px);
+                    }
+
+
+                    /* REGISTER */
+
+                    .account-register {
+                        border: 1px solid #dcd7d1;
+
+                        background: #ffffff;
+
+                        color: #211b18;
+                    }
+
+                    .account-register:hover {
+                        background: #f5f1eb;
+
+                        border-color: #211b18;
+
+                        color: #211b18;
+                    }
+
+
+
+
+                    .account-links {
+                        display: flex;
+
+                        justify-content: center;
+
+                        gap: 25px;
+
+                        margin-top: 25px;
+
+                        padding-top: 20px;
+
+                        border-top: 1px solid #eeeeee;
+                    }
+
+                    .account-links a {
+                        display: flex;
+
+                        align-items: center;
+
+                        gap: 7px;
+
+                        color: #666;
+
+                        text-decoration: none;
+
+                        font-size: 12px;
+
+                        transition: .3s ease;
+                    }
+
+                    .account-links a:hover {
+                        color: #9b6b3d;
+                    }
+
+
+
+
+                    @media (max-width: 600px) {
+
+                        .account-overlay {
+                            padding: 15px;
+                        }
+
+                        .account-modal {
+                            max-width: 100%;
+
+                            padding: 42px 22px 25px;
+
+                            border-radius: 16px;
+                        }
+
+                        .account-icon {
+                            width: 60px;
+                            height: 60px;
+
+                            font-size: 22px;
+                        }
+
+                        .account-content h2 {
+                            font-size: 28px;
+                        }
+
+                        .account-content p {
+                            font-size: 13px;
+                        }
+
+                        .account-links {
+                            gap: 18px;
+                        }
+
+                    }
+                </style>
+                <script>
+
+                    const accountOverlay =
+                        document.getElementById("accountOverlay");
+
+
+                    /* OPEN ACCOUNT */
+
+                    function openAccount(event) {
+
+                        event.preventDefault();
+
+                        accountOverlay.classList.add("active");
+
+                        document.body.style.overflow = "hidden";
+                    }
+
+
+                    /* CLOSE ACCOUNT */
+
+                    function closeAccount() {
+
+                        accountOverlay.classList.remove("active");
+
+                        document.body.style.overflow = "";
+                    }
+
+
+                    /* CLICK OUTSIDE */
+
+                    accountOverlay.addEventListener("click", function (event) {
+
+                        if (event.target === accountOverlay) {
+
+                            closeAccount();
+
+                        }
+
+                    });
+
+
+                    /* ESC KEY */
+
+                    document.addEventListener("keydown", function (event) {
+
+                        if (
+                            event.key === "Escape" &&
+                            accountOverlay.classList.contains("active")
+                        ) {
+
+                            closeAccount();
+
+                        }
+
+                    });
+
+                </script>
+
+
+
+                <!-- CART -->
+                <a href="#" class="nav-icon" aria-label="Cart" onclick="openCart(event)">
+
+                    <i class="fa-solid fa-bag-shopping"></i>
+
+                    <span class="count">
+                        2
+                    </span>
+
+                </a>
+
+                <div class="cart-overlay" id="cartOverlay">
+
+                    <div class="cart-modal">
+
+                        <!-- CART HEADER -->
+                        <div class="cart-header">
+
+                            <div>
+                                <span class="cart-label">
+                                    YOUR SHOPPING BAG
+                                </span>
+
+                                <h2>
+                                    My Cart
+                                </h2>
+                            </div>
+
+                            <button class="cart-close" onclick="closeCart()" aria-label="Close Cart">
+
+                                <i class="fa-solid fa-xmark"></i>
+
+                            </button>
+
+                        </div>
+
+
+                        <!-- CART ITEMS -->
+                        <div class="cart-items">
+
+
+                            <!-- ITEM 1 -->
+                            <div class="cart-item">
+
+                                <div class="cart-product-image">
+
+                                    <img src="https://i.pinimg.com/1200x/6b/bf/99/6bbf99965fc7a1f6ef852238a1d65d96.jpg"
+                                        alt="Kanchipuram Wedding Silk Saree">
+
+                                </div>
+
+
+                                <div class="cart-product-info">
+
+                                    <h3>
+                                        Premium Silk Saree
+                                    </h3>
+
+                                    <p>
+                                        Traditional Collection
+                                    </p>
+
+                                    <div class="cart-bottom">
+
+                                        <div class="quantity">
+
+                                            <button onclick="changeQuantity(this, -1)">
+                                                −
+                                            </button>
+
+                                            <span>
+                                                1
+                                            </span>
+
+                                            <button onclick="changeQuantity(this, 1)">
+                                                +
+                                            </button>
+
+                                        </div>
+
+                                        <strong>
+                                            ₹5,499
+                                        </strong>
+
+                                    </div>
+
+                                </div>
+
+
+                                <button class="remove-item" onclick="removeCartItem(this)" aria-label="Remove item">
+
+                                    <i class="fa-solid fa-trash"></i>
+
+                                </button>
+
+                            </div>
+
+
+                            <!-- ITEM 2 -->
+                            <div class="cart-item">
+
+                                <div class="cart-product-image">
+
+                                    <img src="https://i.pinimg.com/1200x/70/55/1f/70551f3761d82cb2456e34be579389fb.jpg"
+                                        alt="Royal Kanchipuram Silk Saree">
+
+                                </div>
+
+
+                                <div class="cart-product-info">
+
+                                    <h3>
+                                        Kanchipuram Silk Saree
+                                    </h3>
+
+                                    <p>
+                                        Wedding Collection
+                                    </p>
+
+                                    <div class="cart-bottom">
+
+                                        <div class="quantity">
+
+                                            <button onclick="changeQuantity(this, -1)">
+                                                −
+                                            </button>
+
+                                            <span>
+                                                1
+                                            </span>
+
+                                            <button onclick="changeQuantity(this, 1)">
+                                                +
+                                            </button>
+
+                                        </div>
+
+                                        <strong>
+                                            ₹4,999
+                                        </strong>
+
+                                    </div>
+
+                                </div>
+
+
+                                <button class="remove-item" onclick="removeCartItem(this)" aria-label="Remove item">
+
+                                    <i class="fa-solid fa-trash"></i>
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- CART FOOTER -->
+                        <div class="cart-footer">
+
+                            <div class="cart-summary">
+
+                                <span>
+                                    Subtotal
+                                </span>
+
+                                <strong id="cartTotal">
+                                    ₹10,498
+                                </strong>
+
+                            </div>
+
+                            <p class="shipping-note">
+                                Shipping and taxes calculated at checkout.
+                            </p>
+
+
+                            <a href="buynow.html" class="checkout-btn">
+
+                                Proceed to Checkout
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </a>
+
+
+                            <a href="#" class="view-cart-btn">
+
+                                View Full Cart
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <style>
+                    .cart-overlay {
+                        position: fixed;
+                        inset: 0;
+
+                        width: 100%;
+                        height: 100dvh;
+
+                        background: rgba(20, 16, 13, 0.68);
+
+                        backdrop-filter: blur(8px);
+                        -webkit-backdrop-filter: blur(8px);
+
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        padding: 20px;
+
+                        opacity: 0;
+                        visibility: hidden;
+                        pointer-events: none;
+
+                        transition:
+                            opacity .35s ease,
+                            visibility .35s ease;
+
+                        z-index: 99999;
+                    }
+
+                    .cart-overlay.active {
+                        opacity: 1;
+                        visibility: visible;
+                        pointer-events: auto;
+                    }
+
+
+
+
+                    .cart-modal {
+                        width: 100%;
+                        max-width: 650px;
+                        max-height: 90vh;
+
+                        background: #ffffff;
+
+                        border-radius: 20px;
+
+                        overflow: hidden;
+
+                        box-shadow:
+                            0 30px 80px rgba(0, 0, 0, .30);
+
+                        transform: translateY(35px) scale(.96);
+
+                        transition: transform .35s ease;
+
+                        display: flex;
+                        flex-direction: column;
+                    }
+
+                    .cart-overlay.active .cart-modal {
+                        transform: translateY(0) scale(1);
+                    }
+
+
+
+
+                    .cart-header {
+                        display: flex;
+
+                        align-items: center;
+                        justify-content: space-between;
+
+                        padding: 28px 30px 22px;
+
+                        border-bottom: 1px solid #eeeeee;
+                    }
+
+                    .cart-label {
+                        display: block;
+
+                        margin-bottom: 7px;
+
+                        color: #9b6b3d;
+
+                        font-size: 10px;
+
+                        letter-spacing: 2.5px;
+
+                        font-weight: 600;
+                    }
+
+                    .cart-header h2 {
+                        margin: 0;
+
+                        color: #211b18;
+
+                        font-size: 30px;
+
+                        font-weight: 500;
+                    }
+
+
+
+
+                    .cart-close {
+                        width: 40px;
+                        height: 40px;
+
+                        border: none;
+
+                        border-radius: 50%;
+
+                        background: #f4f1ed;
+
+                        color: #211b18;
+
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        cursor: pointer;
+
+                        font-size: 17px;
+
+                        transition: .3s ease;
+                    }
+
+                    .cart-close:hover {
+                        background: #211b18;
+
+                        color: #ffffff;
+
+                        transform: rotate(90deg);
+                    }
+
+
+
+
+                    .cart-items {
+                        padding: 10px 30px;
+
+                        overflow-y: auto;
+
+                        flex: 1;
+                    }
+
+                    .cart-item {
+                        position: relative;
+
+                        display: flex;
+
+                        gap: 16px;
+
+                        padding: 18px 0;
+
+                        border-bottom: 1px solid #eeeeee;
+                    }
+
+                    .cart-product-image {
+                        width: 95px;
+                        height: 115px;
+
+                        flex-shrink: 0;
+
+                        overflow: hidden;
+
+                        border-radius: 8px;
+
+                        background: #f5f2ee;
+                    }
+
+                    .cart-product-image img {
+                        width: 100%;
+                        height: 100%;
+
+                        display: block;
+
+                        object-fit: cover;
+                    }
+
+
+
+
+                    .cart-product-info {
+                        flex: 1;
+
+                        padding-right: 25px;
+                    }
+
+                    .cart-product-info h3 {
+                        margin: 2px 0 6px;
+
+                        color: #211b18;
+
+                        font-size: 15px;
+
+                        font-weight: 600;
+                    }
+
+                    .cart-product-info p {
+                        margin: 0 0 15px;
+
+                        color: #888;
+
+                        font-size: 12px;
+                    }
+
+
+
+                    .cart-bottom {
+                        display: flex;
+
+                        align-items: center;
+                        justify-content: space-between;
+                    }
+
+                    .cart-bottom strong {
+                        color: #211b18;
+
+                        font-size: 15px;
+                    }
+
+
+
+
+                    .quantity {
+                        display: flex;
+
+                        align-items: center;
+
+                        border: 1px solid #ddd;
+
+                        border-radius: 5px;
+
+                        overflow: hidden;
+                    }
+
+                    .quantity button {
+                        width: 30px;
+                        height: 28px;
+
+                        border: none;
+
+                        background: #ffffff;
+
+                        color: #211b18;
+
+                        cursor: pointer;
+
+                        font-size: 15px;
+                    }
+
+                    .quantity button:hover {
+                        background: #f5f2ee;
+                    }
+
+                    .quantity span {
+                        min-width: 30px;
+
+                        text-align: center;
+
+                        font-size: 12px;
+                    }
+
+
+
+
+                    .remove-item {
+                        position: absolute;
+
+                        top: 18px;
+                        right: 0;
+
+                        border: none;
+
+                        background: transparent;
+
+                        color: #aaa;
+
+                        cursor: pointer;
+
+                        font-size: 12px;
+
+                        transition: .3s ease;
+                    }
+
+                    .remove-item:hover {
+                        color: #b44b3b;
+                    }
+
+
+
+
+                    .cart-footer {
+                        padding: 22px 30px 28px;
+
+                        background: #faf8f4;
+
+                        border-top: 1px solid #eeeeee;
+                    }
+
+                    .cart-summary {
+                        display: flex;
+
+                        align-items: center;
+                        justify-content: space-between;
+
+                        color: #211b18;
+
+                        font-size: 15px;
+                    }
+
+                    .cart-summary strong {
+                        font-size: 20px;
+                    }
+
+                    .shipping-note {
+                        margin: 7px 0 18px;
+
+                        color: #888;
+
+                        font-size: 11px;
+                    }
+
+
+                    .checkout-btn {
+                        width: 100%;
+                        height: 52px;
+
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        gap: 10px;
+
+                        border-radius: 7px;
+
+                        background: #211b18;
+
+                        color: #ffffff;
+
+                        text-decoration: none;
+
+                        font-size: 13px;
+
+                        transition: .3s ease;
+                    }
+
+                    .checkout-btn:hover {
+                        background: #9b6b3d;
+
+                        color: #ffffff;
+
+                        transform: translateY(-2px);
+                    }
+
+
+
+
+                    .view-cart-btn {
+                        display: block;
+
+                        margin-top: 13px;
+
+                        text-align: center;
+
+                        color: #211b18;
+
+                        text-decoration: none;
+
+                        font-size: 12px;
+
+                        transition: .3s ease;
+                    }
+
+                    .view-cart-btn:hover {
+                        color: #9b6b3d;
+                    }
+
+
+
+
+                    @media (max-width: 600px) {
+
+                        .cart-overlay {
+                            padding: 12px;
+                        }
+
+                        .cart-modal {
+                            max-height: 94vh;
+
+                            border-radius: 16px;
+                        }
+
+                        .cart-header {
+                            padding: 22px 20px 18px;
+                        }
+
+                        .cart-header h2 {
+                            font-size: 25px;
+                        }
+
+                        .cart-items {
+                            padding: 5px 20px;
+                        }
+
+                        .cart-item {
+                            gap: 12px;
+                        }
+
+                        .cart-product-image {
+                            width: 75px;
+                            height: 95px;
+                        }
+
+                        .cart-product-info h3 {
+                            font-size: 13px;
+                        }
+
+                        .cart-product-info p {
+                            font-size: 11px;
+                            margin-bottom: 10px;
+                        }
+
+                        .cart-footer {
+                            padding: 18px 20px 22px;
+                        }
+
+                    }
+                </style>
+                <script>
+
+                    const cartOverlay =
+                        document.getElementById("cartOverlay");
+
+
+                    /* OPEN CART */
+
+                    function openCart(event) {
+
+                        event.preventDefault();
+
+                        cartOverlay.classList.add("active");
+
+                        document.body.style.overflow = "hidden";
+                    }
+
+
+                    /* CLOSE CART */
+
+                    function closeCart() {
+
+                        cartOverlay.classList.remove("active");
+
+                        document.body.style.overflow = "";
+                    }
+
+
+                    /* CLICK OUTSIDE */
+
+                    cartOverlay.addEventListener("click", function (event) {
+
+                        if (event.target === cartOverlay) {
+
+                            closeCart();
+
+                        }
+
+                    });
+
+
+                    /* ESC KEY */
+
+                    document.addEventListener("keydown", function (event) {
+
+                        if (
+                            event.key === "Escape" &&
+                            cartOverlay.classList.contains("active")
+                        ) {
+
+                            closeCart();
+
+                        }
+
+                    });
+
+
+                    /* QUANTITY */
+
+                    function changeQuantity(button, amount) {
+
+                        const quantityBox =
+                            button.parentElement;
+
+                        const quantityText =
+                            quantityBox.querySelector("span");
+
+                        let quantity =
+                            parseInt(quantityText.textContent);
+
+                        quantity += amount;
+
+                        if (quantity < 1) {
+                            quantity = 1;
+                        }
+
+                        quantityText.textContent = quantity;
+                    }
+
+
+                    /* REMOVE ITEM */
+
+                    function removeCartItem(button) {
+
+                        const item =
+                            button.closest(".cart-item");
+
+                        item.remove();
+
+                        updateCartCount();
+
+                    }
+
+
+                    /* UPDATE BADGE */
+
+                    function updateCartCount() {
+
+                        const items =
+                            document.querySelectorAll(".cart-item");
+
+                        const count =
+                            document.querySelector(".nav-icon .count");
+
+                        if (count) {
+
+                            count.textContent = items.length;
+
+                        }
+
+                    }
+
+                </script>
+
+
+
+                <!-- MOBILE MENU -->
+
+                <button class="menu-btn" id="menuBtn" onclick="toggleMenu()" aria-label="Open menu"
+                    aria-expanded="false">
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================================
+     HERO
+    ========================================================= -->
+
+    <section class="catalog-hero">
+
+        <div class="container">
+
+            <div class="hero-content">
+
+                <div class="hero-label">
+                    Timeless Indian Craft
+                </div>
+
+                <h1>
+                    Sarees
+                    <span>That Speak.</span>
+                </h1>
+
+                <p>
+                    Discover thoughtfully selected sarees
+                    crafted with timeless techniques,
+                    luxurious fabrics and beautiful
+                    traditional details.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+     NEW ARRIVALS
+========================================================= -->
+
+    <section class="featured-section" id="new-arrivals">
+
+        <div class="container">
+
+
+            <div class="featured-heading">
+
+                <div class="eyebrow">
+                    Fresh From The Loom
+                </div>
+
+                <h2>
+                    New Arrivals
+                </h2>
+
+                <div class="heading-line"></div>
+
+                <p>
+                    Explore our latest saree collections,
+                    carefully selected for elegant
+                    everyday style and special occasions.
+                </p>
+
+            </div>
+
+
+            <div class="owl-carousel
+                   owl-theme
+                   new-arrivals-carousel">
+
+
+                <!-- PRODUCT 1 -->
+
+                <div class="featured-product">
+
+                    <div class="product-image">
+
+                        <img src="https://i.pinimg.com/1200x/70/55/1f/70551f3761d82cb2456e34be579389fb.jpg"
+                            alt="Royal Kanchipuram Silk Saree">
+
+                        <span class="product-badge new">
+                            NEW
+                        </span>
+
+
+                        <button class="wishlist-btn" onclick="toggleWishlist(this)" aria-label="Wishlist">
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+
+                        <div class="product-overlay">
+
+                            <button type="button" onclick="openQuickView(
+                                'https://i.pinimg.com/1200x/70/55/1f/70551f3761d82cb2456e34be579389fb.jpg',
+                                'Royal Kanchipuram Silk Saree',
+                                'KANCHIPURAM SILK',
+                                '₹4,999',
+                                'A luxurious Kanchipuram silk saree featuring traditional weaving, rich texture and elegant zari detailing.'
+                            )">
+
+                                <i class="fa-regular fa-eye"></i>
+
+                                &nbsp; Quick View
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="product-details">
+
+                        <span class="product-category">
+                            Kanchipuram Silk
+                        </span>
+
+                        <h3>
+                            Royal Kanchipuram Silk Saree
+                        </h3>
+
+                        <div class="product-rating">
+
+                            <span>
+                                ★★★★★
+                            </span>
+
+                            <small>
+                                4.9
+                            </small>
+                        </div>
+
+                        <div class="product-bottom">
+
+                            <strong>
+                                ₹4,999
+                            </strong>
+
+                            <button onclick="showToast('Product added to cart')">
+
+                                Add To Cart
+
+                            </button>
+
+
+
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUCT 2 -->
+
+                <div class="featured-product">
+
+                    <div class="product-image">
+
+                        <img src="https://i.pinimg.com/736x/71/f3/0b/71f30be75d15ebdb5994d4b6542aacf4.jpg"
+                            alt="Elegant Banarasi Saree">
+
+                        <span class="product-badge new">
+                            NEW
+                        </span>
+
+                        <button class="wishlist-btn" onclick="toggleWishlist(this)" aria-label="Wishlist">
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+                        <div class="product-overlay">
+
+                            <button type="button" onclick="openQuickView(
+                                'https://i.pinimg.com/736x/71/f3/0b/71f30be75d15ebdb5994d4b6542aacf4.jpg',
+                                'Banarasi Heritage Saree',
+                                'BANARASI SILK',
+                                '₹3,999',
+                                'A graceful Banarasi saree crafted with beautiful patterns and premium traditional textile finishing.'
+                            )">
+
+                                <i class="fa-regular fa-eye"></i>
+
+                                &nbsp; Quick View
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="product-details">
+
+                        <span class="product-category">
+                            Banarasi
+                        </span>
+
+                        <h3>
+                            Banarasi Heritage Saree
+                        </h3>
+
+                        <div class="product-rating">
+
+                            <span>
+                                ★★★★★
+                            </span>
+
+                            <small>
+                                4.8
+                            </small>
+
+                        </div>
+
+                        <div class="product-bottom">
+
+                            <strong>
+                                ₹3,999
+                            </strong>
+
+                            <button onclick="showToast('Product added to cart')">
+
+                                Add To Cart
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUCT 3 -->
+
+                <div class="featured-product">
+
+                    <div class="product-image">
+
+                        <img src="https://i.pinimg.com/736x/71/0e/8e/710e8ea7e38b16ea12a7e84ec5be594c.jpg"
+                            alt="Soft Organza Saree">
+
+                        <span class="product-badge bestseller">
+                            BESTSELLER
+                        </span>
+
+                        <button class="wishlist-btn" onclick="toggleWishlist(this)" aria-label="Wishlist">
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+                        <div class="product-overlay">
+
+                            <button type="button" onclick="openQuickView(
+                                'https://i.pinimg.com/736x/71/0e/8e/710e8ea7e38b16ea12a7e84ec5be594c.jpg',
+                                'Premium Organza Saree',
+                                'ORGANZA',
+                                '₹2,999',
+                                'A lightweight premium organza saree designed with refined texture and elegant detailing.'
+                            )">
+
+                                <i class="fa-regular fa-eye"></i>
+
+                                &nbsp; Quick View
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="product-details">
+
+                        <span class="product-category">
+                            Organza
+                        </span>
+
+                        <h3>
+                            Premium Organza Saree
+                        </h3>
+
+                        <div class="product-rating">
+
+                            <span>
+                                ★★★★★
+                            </span>
+
+                            <small>
+                                4.9
+                            </small>
+
+                        </div>
+
+                        <div class="product-bottom">
+
+                            <strong>
+                                ₹2,999
+                            </strong>
+
+                            <button onclick="showToast('Product added to cart')">
+
+                                Add To Cart
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- PRODUCT 4 -->
+
+                <div class="featured-product">
+
+                    <div class="product-image">
+
+                        <img src="https://i.pinimg.com/736x/53/ec/0e/53ec0ebfdb51e32b630ffa16ca4a97a0.jpg"
+                            alt="Handloom Cotton Saree">
+
+                        <span class="product-badge new">
+                            NEW
+                        </span>
+
+                        <button class="wishlist-btn" onclick="toggleWishlist(this)" aria-label="Wishlist">
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+                        <div class="product-overlay">
+
+                            <button type="button" onclick="openQuickView(
+                                'https://i.pinimg.com/736x/53/ec/0e/53ec0ebfdb51e32b630ffa16ca4a97a0.jpg',
+                                'Elegant Linen Saree',
+                                'LINEN',
+                                '₹2,499',
+                                'A beautifully textured linen saree offering lightweight comfort and effortless elegance.'
+                            )">
+
+                                <i class="fa-regular fa-eye"></i>
+
+                                &nbsp; Quick View
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="product-details">
+
+                        <span class="product-category">
+                            Linen
+                        </span>
+
+                        <h3>
+                            Elegant Linen Saree
+                        </h3>
+
+                        <div class="product-rating">
+
+                            <span>
+                                ★★★★★
+                            </span>
+
+                            <small>
+                                4.7
+                            </small>
+
+                        </div>
+
+                        <div class="product-bottom">
+
+                            <strong>
+                                ₹2,499
+                            </strong>
+
+                            <button onclick="showToast('Product added to cart')">
+
+                                Add To Cart
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <div class="featured-product">
+
+                    <div class="product-image">
+
+                        <img src="https://i.pinimg.com/1200x/8d/c9/4c/8dc94cba4d18171d55bdb2086c2c0725.jpg"
+                            alt="Chanderi Silk Saree">
+                        <span class="product-badge new">
+                            NEW
+                        </span>
+
+                        <button class="wishlist-btn" onclick="toggleWishlist(this)" aria-label="Wishlist">
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+                        <div class="product-overlay">
+
+                            <button type="button" onclick="openQuickView(
+                                'https://i.pinimg.com/1200x/8d/c9/4c/8dc94cba4d18171d55bdb2086c2c0725.jpg',
+                                'Elegant Linen Saree',
+                                'LINEN',
+                                '₹2,299',
+                                'A beautifully textured linen saree offering lightweight comfort and effortless elegance.'
+                            )">
+
+                                <i class="fa-regular fa-eye"></i>
+
+                                &nbsp; Quick View
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="product-details">
+
+                        <span class="product-category">
+                            silk
+                        </span>
+
+                        <h3>
+                            Elegant slik Saree
+                        </h3>
+
+                        <div class="product-rating">
+
+                            <span>
+                                ★★★★★
+                            </span>
+
+                            <small>
+                                4.7
+                            </small>
+
+                        </div>
+
+                        <div class="product-bottom">
+
+                            <strong>
+                                ₹2,299
+                            </strong>
+
+                            <button onclick="showToast('Product added to cart')">
+
+                                Add To Cart
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+     BEST SELLING
+========================================================= -->
+
+    <section class="featured-section best-selling-section" id="best-selling">
+
+        <div class="container">
+
+            <div class="featured-heading">
+
+                <div class="eyebrow">
+                    Loved By Our Customers
+                </div>
+
+                <h2>
+                    Best Selling Sarees
+                </h2>
+
+                <div class="heading-line"></div>
+
+                <p>
+                    Discover the sarees our customers
+                    love the most.
+                </p>
+
+            </div>
+
+
+            <div class="owl-carousel
+                   owl-theme
+                   best-selling-carousel">
+
+
+                <!-- BEST SELLER -->
+
+                <div class="featured-product">
+
+                    <div class="product-image">
+
+                        <img src="https://i.pinimg.com/1200x/6b/bf/99/6bbf99965fc7a1f6ef852238a1d65d96.jpg"
+                            alt="Kanchipuram Wedding Silk Saree">
+
+                        <span class="product-badge bestseller">
+                            BESTSELLER
+                        </span>
+
+                        <button class="wishlist-btn" onclick="toggleWishlist(this)">
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+                        <div class="product-overlay">
+
+                            <button type="button" onclick="openQuickView(
+                                'https://i.pinimg.com/1200x/6b/bf/99/6bbf99965fc7a1f6ef852238a1d65d96.jpg',
+                                'Traditional Silk Saree',
+                                'SILK SAREE',
+                                '₹5,499',
+                                'A timeless traditional silk saree created for celebrations, weddings and memorable occasions.'
+                            )">
+
+                                <i class="fa-regular fa-eye"></i>
+
+                                &nbsp; Quick View
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="product-details">
+
+                        <span class="product-category">
+                            Silk Saree
+                        </span>
+
+                        <h3>
+                            Traditional Silk Saree
+                        </h3>
+
+                        <div class="product-rating">
+
+                            <span>
+                                ★★★★★
+                            </span>
+
+                            <small>
+                                5.0
+                            </small>
+
+                        </div>
+
+                        <div class="product-bottom">
+
+                            <strong>
+                                ₹5,499
+                            </strong>
+
+                            <button onclick="showToast('Product added to cart')">
+
+                                Add To Cart
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BEST SELLER 2 -->
+
+                <div class="featured-product">
+
+                    <div class="product-image">
+
+                        <img src="https://i.pinimg.com/1200x/86/36/17/863617f66a1f7d7f5a86a6f638655724.jpg"
+                            alt="Banarasi Celebration Saree">
+
+                        <span class="product-badge bestseller">
+                            BESTSELLER
+                        </span>
+
+                        <button class="wishlist-btn" onclick="toggleWishlist(this)">
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+                        <div class="product-overlay">
+
+                            <button type="button" onclick="openQuickView(
+                                'https://i.pinimg.com/1200x/86/36/17/863617f66a1f7d7f5a86a6f638655724.jpg',
+                                'Designer Cotton Saree',
+                                'COTTON',
+                                '₹1,999',
+                                'A breathable designer cotton saree combining traditional craftsmanship with comfortable everyday elegance.'
+                            )">
+
+                                <i class="fa-regular fa-eye"></i>
+
+                                &nbsp; Quick View
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="product-details">
+
+                        <span class="product-category">
+                            Cotton
+                        </span>
+
+                        <h3>
+                            Designer Cotton Saree
+                        </h3>
+
+                        <div class="product-rating">
+
+                            <span>
+                                ★★★★★
+                            </span>
+
+                            <small>
+                                4.8
+                            </small>
+
+                        </div>
+
+                        <div class="product-bottom">
+
+                            <strong>
+                                ₹1,999
+                            </strong>
+
+                            <button onclick="showToast('Product added to cart')">
+
+                                Add To Cart
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- BEST SELLER 3-->
+
+                <div class="featured-product">
+
+                    <div class="product-image">
+
+                        <img src="https://i.pinimg.com/1200x/85/90/35/859035ecf9dbcd67215ae7669fb108a9.jpg"
+                            alt="Premium Organza Saree">
+                        <span class="product-badge bestseller">
+                            BESTSELLER
+                        </span>
+
+                        <button class="wishlist-btn" onclick="toggleWishlist(this)">
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+                        <div class="product-overlay">
+
+                            <button type="button" onclick="openQuickView(
+                                'https://i.pinimg.com/1200x/85/90/35/859035ecf9dbcd67215ae7669fb108a9.jpg',
+                                'Designer Cotton Saree',
+                                'COTTON',
+                                '₹2,999',
+                                'A breathable designer cotton saree combining traditional craftsmanship with comfortable everyday elegance.'
+                            )">
+
+                                <i class="fa-regular fa-eye"></i>
+
+                                &nbsp; Quick View
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="product-details">
+
+                        <span class="product-category">
+                            Premium Organza
+                        </span>
+
+                        <h3>
+                            Premium Organza Saree
+                        </h3>
+
+                        <div class="product-rating">
+
+                            <span>
+                                ★★★★★
+                            </span>
+
+                            <small>
+                                4.8
+                            </small>
+
+                        </div>
+
+                        <div class="product-bottom">
+
+                            <strong>
+                                ₹2,999
+                            </strong>
+
+                            <button onclick="showToast('Product added to cart')">
+
+                                Add To Cart
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- BEST SELLER 4 -->
+
+                <div class="featured-product">
+
+                    <div class="product-image">
+
+                        <img src="https://i.pinimg.com/1200x/dc/72/21/dc7221bc17eaf1ce25f9f67d342186e9.jpg"
+                            alt="Elegant Cotton Saree">
+                        <span class="product-badge bestseller">
+                            BESTSELLER
+                        </span>
+
+                        <button class="wishlist-btn" onclick="toggleWishlist(this)">
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+                        <div class="product-overlay">
+
+                            <button type="button" onclick="openQuickView(
+                                'https://i.pinimg.com/1200x/dc/72/21/dc7221bc17eaf1ce25f9f67d342186e9.jpg',
+                                'Designer Cotton Saree',
+                                'COTTON',
+                                '₹1,499',
+                                'A breathable designer cotton saree combining traditional craftsmanship with comfortable everyday elegance.'
+                            )">
+
+                                <i class="fa-regular fa-eye"></i>
+
+                                &nbsp; Quick View
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="product-details">
+
+                        <span class="product-category">
+                            Cotton
+                        </span>
+
+                        <h3>
+                            Elegant Everyday Cotton
+                        </h3>
+
+                        <div class="product-rating">
+
+                            <span>
+                                ★★★★★
+                            </span>
+
+                            <small>
+                                4.8
+                            </small>
+
+                        </div>
+
+                        <div class="product-bottom">
+
+                            <strong>
+                                ₹1,499
+                            </strong>
+
+                            <button onclick="showToast('Product added to cart')">
+
+                                Add To Cart
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- BEST SELLER 5 -->
+
+                <div class="featured-product">
+
+                    <div class="product-image">
+
+                        <img src="https://i.pinimg.com/1200x/83/c6/71/83c67142f3e9593dcc071a5f0afa6ba3.jpg"
+                            alt="Festive Silk Saree">
+                        <span class="product-badge bestseller">
+                            BESTSELLER
+                        </span>
+
+                        <button class="wishlist-btn" onclick="toggleWishlist(this)">
+
+                            <i class="fa-regular fa-heart"></i>
+
+                        </button>
+
+                        <div class="product-overlay">
+
+                            <button type="button" onclick="openQuickView(
+                                'https://i.pinimg.com/1200x/83/c6/71/83c67142f3e9593dcc071a5f0afa6ba3.jpg',
+                                'Designer Cotton Saree',
+                                'COTTON',
+                                '₹3,499',
+                                'A breathable designer cotton saree combining traditional craftsmanship with comfortable everyday elegance.'
+                            )">
+
+                                <i class="fa-regular fa-eye"></i>
+
+                                Quick View
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <div class="product-details">
+
+                        <span class="product-category">
+                            Silk Collection
+                        </span>
+
+                        <h3>
+                            Festive Heritage Silk Saree
+                        </h3>
+
+                        <div class="product-rating">
+
+                            <span>
+                                ★★★★★
+                            </span>
+
+                            <small>
+                                4.8
+                            </small>
+
+                        </div>
+
+                        <div class="product-bottom">
+
+                            <strong>
+                                ₹3,499
+                            </strong>
+
+                            <button onclick="showToast('Product added to cart')">
+
+                                Add To Cart
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+        <div class="carousel-controls">
+
+            <button class="best-prev">
+                <i class="fa-solid fa-arrow-left"></i>
+            </button>
+
+            <button class="best-next">
+                <i class="fa-solid fa-arrow-right"></i>
+            </button>
+
+        </div>
+
+        <div class="collection-button">
+
+            <a href="catelog.html">
+                Explore Complete Collection
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+     TRUST
+========================================================= -->
+
+    <section class="trust-section">
+
+        <div class="container">
+
+            <div class="trust-grid">
+
+                <div class="trust-card">
+
+                    <i class="fa-solid fa-truck"></i>
+
+                    <h3>
+                        Fast Delivery
+                    </h3>
+
+                    <p>
+                        Safe and reliable delivery
+                        across India.
+                    </p>
+
+                </div>
+
+
+                <div class="trust-card">
+
+                    <i class="fa-solid fa-gem"></i>
+
+                    <h3>
+                        Premium Quality
+                    </h3>
+
+                    <p>
+                        Carefully selected fabrics
+                        and craftsmanship.
+                    </p>
+
+                </div>
+
+
+                <div class="trust-card">
+
+                    <i class="fa-solid fa-heart"></i>
+
+                    <h3>
+                        Made With Love
+                    </h3>
+
+                    <p>
+                        Every saree is selected
+                        with attention to detail.
+                    </p>
+
+                </div>
+
+
+                <div class="trust-card">
+
+                    <i class="fa-solid fa-shield-halved"></i>
+
+                    <h3>
+                        Secure Shopping
+                    </h3>
+
+                    <p>
+                        Safe and secure checkout
+                        experience.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!--=============================================
+    Review
+    ==================================================-->
+    <section class="stack-wrapper">
+
+
+        <!-- =====================================================
+             HEADING
+        ====================================================== -->
+
+        <div class="reviews-heading">
+
+            <div class="hero-label" style="color: #a33c3c;">
+                Loved By Our Customers
+            </div>
+
+            <h1>
+                Stories Woven
+                <span>With Love</span>
+            </h1>
+
+            <div class="heading-line"></div>
+
+            <p>
+                Every saree carries a story of craftsmanship,
+                tradition and timeless elegance. Discover what
+                our customers have to say about their Avenza
+                experience.
+            </p>
+
+        </div>
+
+
+        <!-- =====================================================
+             CARD 01
+        ====================================================== -->
+        <article class="stack-card dark-card">
+            <article class="review-card">
+                <div>
+
+                    <div class="review-top">
+
+                        <div class="customer-avatar">
+                            AS
+                        </div>
+
+                        <div class="customer-info">
+
+                            <h3>
+                                Anitha S
+                            </h3>
+
+                            <span>
+                                Chennai, Tamil Nadu
+                            </span>
+
+                        </div>
+
+                        <div class="verified">
+                            <i class="fa-solid fa-circle-check"></i>
+                            Verified
+                        </div>
+
+                    </div>
+
+
+                    <div class="review-rating">
+
+                        <div class="stars">
+                            ★★★★★
+                        </div>
+
+                    </div>
+
+
+                    <p class="review-text">
+                        “The Kanchipuram silk saree was absolutely
+                        beautiful. The colour, weaving and finishing
+                        were perfect. It looked even more elegant
+                        when I wore it.”
+                    </p>
+
+                </div>
+
+
+                <div class="review-footer">
+
+                    <span class="review-number">
+                        REVIEW 01
+                    </span>
+
+                    <span class="review-product">
+                        Kanchipuram Silk Saree
+                    </span>
+
+                </div>
+
+            </article>
+
+        </article>
+
+
+        <!-- =====================================================
+             CARD 02
+        ====================================================== -->
+
+        <article class="stack-card dark-card">
+
+            <article class="review-card">
+
+                <div>
+
+                    <div class="review-top">
+
+                        <div class="customer-avatar">
+                            PR
+                        </div>
+
+                        <div class="customer-info">
+
+                            <h3>
+                                Priya R
+                            </h3>
+
+                            <span>
+                                Coimbatore, Tamil Nadu
+                            </span>
+
+                        </div>
+
+                        <div class="verified">
+                            <i class="fa-solid fa-circle-check"></i>
+                            Verified
+                        </div>
+
+                    </div>
+
+
+                    <div class="review-rating">
+
+                        <div class="stars">
+                            ★★★★★
+                        </div>
+
+                    </div>
+
+
+                    <p class="review-text">
+                        “I loved the quality of the Banarasi saree.
+                        The design looked rich and elegant, and the
+                        packaging was beautifully done. A wonderful
+                        shopping experience.”
+                    </p>
+
+                </div>
+
+
+                <div class="review-footer">
+
+                    <span class="review-number">
+                        REVIEW 02
+                    </span>
+
+                    <span class="review-product">
+                        Banarasi Saree
+                    </span>
+
+                </div>
+
+            </article>
+
+        </article>
+
+
+        <!-- =====================================================
+             CARD 03
+        ====================================================== -->
+
+        <article class="stack-card dark-card">
+
+            <article class="review-card">
+
+                <div>
+
+                    <div class="review-top">
+
+                        <div class="customer-avatar">
+                            MK
+                        </div>
+
+                        <div class="customer-info">
+
+                            <h3>
+                                Meena K
+                            </h3>
+
+                            <span>
+                                Madurai, Tamil Nadu
+                            </span>
+
+                        </div>
+
+                        <div class="verified">
+                            <i class="fa-solid fa-circle-check"></i>
+                            Verified
+                        </div>
+
+                    </div>
+
+
+                    <div class="review-rating">
+
+                        <div class="stars">
+                            ★★★★★
+                        </div>
+
+                    </div>
+
+
+                    <p class="review-text">
+                        “A wonderful collection with beautiful
+                        traditional designs. I purchased a silk
+                        saree for a family function and received
+                        so many compliments.”
+                    </p>
+
+                </div>
+
+
+                <div class="review-footer">
+
+                    <span class="review-number">
+                        REVIEW 03
+                    </span>
+
+                    <span class="review-product">
+                        Traditional Silk
+                    </span>
+                </div>
+            </article>
+        </article>
+        <!-- =====================================================
+             CARD 04
+        ====================================================== -->
+
+        <article class="stack-card light-card">
+
+            <article class="review-card">
+
+                <div>
+
+                    <div class="review-top">
+
+                        <div class="customer-avatar">
+                            LK
+                        </div>
+
+                        <div class="customer-info">
+
+                            <h3>
+                                Lakshmi K
+                            </h3>
+
+                            <span>
+                                Bengaluru, Karnataka
+                            </span>
+
+                        </div>
+
+                        <div class="verified">
+                            <i class="fa-solid fa-circle-check"></i>
+                            Verified
+                        </div>
+
+                    </div>
+
+
+                    <div class="review-rating">
+
+                        <div class="stars">
+                            ★★★★★
+                        </div>
+
+                    </div>
+
+
+                    <p class="review-text">
+                        “The saree was exactly as shown on the
+                        website. The fabric quality and colour
+                        combination were excellent. I am very happy
+                        with my purchase.”
+                    </p>
+
+                </div>
+
+
+                <div class="review-footer">
+
+                    <span class="review-number">
+                        REVIEW 04
+                    </span>
+
+                    <span class="review-product">
+                        Designer Saree
+                    </span>
+
+                </div>
+
+            </article>
+
+        </article>
+
+
+        <!-- =====================================================
+             CARD 05
+        ====================================================== -->
+
+        <article class="stack-card light-card">
+
+            <article class="review-card">
+
+                <div>
+
+                    <div class="review-top">
+
+                        <div class="customer-avatar">
+                            SN
+                        </div>
+
+                        <div class="customer-info">
+
+                            <h3>
+                                Sneha N
+                            </h3>
+
+                            <span>
+                                Hyderabad, Telangana
+                            </span>
+
+                        </div>
+
+                        <div class="verified">
+                            <i class="fa-solid fa-circle-check"></i>
+                            Verified
+                        </div>
+
+                    </div>
+
+
+                    <div class="review-rating">
+
+                        <div class="stars">
+                            ★★★★★
+                        </div>
+
+                    </div>
+
+
+                    <p class="review-text">
+                        “I was looking for an elegant saree for a
+                        wedding and found the perfect one at Avenza.
+                        The detailing and finishing were beautiful.”
+                    </p>
+
+                </div>
+
+
+                <div class="review-footer">
+
+                    <span class="review-number">
+                        REVIEW 05
+                    </span>
+
+                    <span class="review-product">
+                        Wedding Collection
+                    </span>
+
+                </div>
+
+            </article>
+
+        </article>
+
+
+    </section>
+
+    <!-- =========================================================
+     FOOTER
+========================================================= -->
+
+   <footer>
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div class="footer-brand">
+                    <h2>AVENZA </h2>
+                    <p>
+                        A contemporary textile destination celebrating
+                        India's timeless weaving traditions through
+                        carefully curated sarees.
+                    </p>
+                    <div class="socials">
+
+                        <a href="https://www.Instagram.com">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a href="https://www.Facebook.com">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+
+                        <a href="https://www.Pinterest.com">
+                            <i class="fa-brands fa-pinterest-p"></i>
+                        </a>
+
+                        <a href="https://www.WhatsApp.com">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h4>Shop</h4>
+
+                    <a href="#">Silk Sarees</a>
+                    <a href="#">Cotton Sarees</a>
+                    <a href="#">Banarasi Sarees</a>
+                    <a href="#">Party Wear</a>
+                    <a href="#">Wedding Collection</a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h4>Information</h4>
+
+                    <a href="about.html">About Us</a>
+                    <a href="checkout.html">Shipping Policy</a>
+                    <a href="#">Returns</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="contact.html">Contact Us</a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h4>Visit Us</h4>
+
+                    <p>
+                        24 Heritage Street,<br>
+                        Textile Market,<br>
+                        Chennai, Tamil Nadu
+                    </p>
+
+                    <p style="margin-top:12px;">
+                        +91 98765 43210
+                    </p>
+
+                    <p>
+                        hello@auratextiles.com
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="copyright">
+
+                © 2026 AVENZA TEXTILES.
+                Crafted with respect for Indian textile traditions.
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <!-- =========================================================
+     QUICK VIEW MODAL
+========================================================= -->
+
+    <div class="modal-overlay" id="quickViewModal">
+
+
+        <div class="quick-modal">
+
+
+            <!-- CLOSE -->
+
+            <button class="close-modal" onclick="closeQuickView()" aria-label="Close">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+
+            <!-- IMAGE -->
+
+            <div class="modal-image">
+
+                <img id="quickViewImage" src="" alt="Product">
+
+            </div>
+
+
+            <!-- CONTENT -->
+
+            <div class="modal-content">
+
+                <span class="product-category" id="quickViewCategory">
+
+                    SAREE
+
+                </span>
+
+
+                <h2 id="quickViewName">
+                    Product Name
+                </h2>
+
+
+                <div class="product-rating">
+
+                    <span>
+                        ★★★★★
+                    </span>
+
+                    <small>
+                        4.9 / 5
+                    </small>
+
+                </div>
+
+
+                <div class="modal-price" id="quickViewPrice">
+
+                    ₹2,999
+
+                </div>
+
+
+                <p class="modal-description" id="quickViewDescription">
+
+                    Product description.
+
+                </p>
+
+
+                <div class="modal-buttons">
+
+
+                    <button class="modal-cart" onclick="quickViewAddToCart()">
+
+                        <i class="fa-solid fa-bag-shopping"></i>
+
+                        &nbsp;
+
+                        Add To Cart
+
+                    </button>
+
+
+                    <button class="modal-wishlist" onclick="quickViewWishlist()" aria-label="Wishlist">
+
+                        <i class="fa-regular fa-heart"></i>
+
+                    </button>
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+ <!-- =========================================================
+     TOAST
+========================================================= -->
+    <div class="toast" id="toast">
+        Product added successfully
+    </div>
+    <!-- =========================================================
+     JQUERY
+========================================================= -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <!-- =========================================================
+     OWL CAROUSEL
+========================================================= -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <script>
+        /* =========================================================
+           MOBILE NAVBAR
+        ========================================================= */
+
+        function toggleMenu() {
+
+            const menu =
+                document.getElementById("mobileNav");
+
+            const menuBtn =
+                document.getElementById("menuBtn");
+
+            const icon =
+                menuBtn.querySelector("i");
+
+
+            menu.classList.toggle("show");
+
+
+            const isOpen =
+                menu.classList.contains("show");
+
+
+            menuBtn.setAttribute(
+                "aria-expanded",
+                isOpen
+            );
+
+
+            if (isOpen) {
+
+                icon.classList.remove(
+                    "fa-bars"
+                );
+
+                icon.classList.add(
+                    "fa-xmark"
+                );
+
+                menuBtn.setAttribute(
+                    "aria-label",
+                    "Close menu"
+                );
+
+            } else {
+
+                icon.classList.remove(
+                    "fa-xmark"
+                );
+
+                icon.classList.add(
+                    "fa-bars"
+                );
+
+                menuBtn.setAttribute(
+                    "aria-label",
+                    "Open menu"
+                );
+
+            }
+
+        }
+
+
+        /* =========================================================
+           CLOSE MOBILE MENU AFTER LINK CLICK
+        ========================================================= */
+
+        document
+            .querySelectorAll("#mobileNav a")
+            .forEach(function (link) {
+
+                link.addEventListener(
+                    "click",
+                    function () {
+
+                        closeMobileMenu();
+
+                    }
+                );
+
+            });
+
+
+        /* =========================================================
+           CLOSE MOBILE MENU
+        ========================================================= */
+
+        function closeMobileMenu() {
+
+            const menu =
+                document.getElementById("mobileNav");
+
+            const menuBtn =
+                document.getElementById("menuBtn");
+
+            const icon =
+                menuBtn.querySelector("i");
+
+
+            menu.classList.remove("show");
+
+
+            menuBtn.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+
+            menuBtn.setAttribute(
+                "aria-label",
+                "Open menu"
+            );
+
+
+            icon.classList.remove(
+                "fa-xmark"
+            );
+
+            icon.classList.add(
+                "fa-bars"
+            );
+
+        }
+
+
+        /* =========================================================
+           CLICK OUTSIDE MOBILE MENU
+        ========================================================= */
+
+        document.addEventListener(
+            "click",
+            function (event) {
+
+                const menu =
+                    document.getElementById("mobileNav");
+
+                const menuBtn =
+                    document.getElementById("menuBtn");
+
+
+                if (!menu || !menuBtn) {
+                    return;
+                }
+
+
+                if (
+                    menu.classList.contains("show") &&
+                    !menu.contains(event.target) &&
+                    !menuBtn.contains(event.target)
+                ) {
+
+                    closeMobileMenu();
+
+                }
+
+            }
+        );
+
+
+        /* =========================================================
+           CLOSE MENU ON DESKTOP
+        ========================================================= */
+
+        window.addEventListener(
+            "resize",
+            function () {
+
+                if (window.innerWidth > 780) {
+
+                    closeMobileMenu();
+
+                }
+
+            }
+        );
+
+
+        /* =========================================================
+           QUICK VIEW
+        ========================================================= */
+
+        function openQuickView(
+            image,
+            name,
+            category,
+            price,
+            description
+        ) {
+
+
+            const modal =
+                document.getElementById(
+                    "quickViewModal"
+                );
+
+
+            document.getElementById(
+                "quickViewImage"
+            ).src = image;
+
+
+            document.getElementById(
+                "quickViewImage"
+            ).alt = name;
+
+
+            document.getElementById(
+                "quickViewName"
+            ).textContent = name;
+
+
+            document.getElementById(
+                "quickViewCategory"
+            ).textContent = category;
+
+
+            document.getElementById(
+                "quickViewPrice"
+            ).textContent = price;
+
+
+            document.getElementById(
+                "quickViewDescription"
+            ).textContent = description;
+
+
+            modal.classList.add("show");
+
+
+            document.body.style.overflow =
+                "hidden";
+
+        }
+
+
+        /* =========================================================
+           CLOSE QUICK VIEW
+        ========================================================= */
+
+        function closeQuickView() {
+
+            const modal =
+                document.getElementById(
+                    "quickViewModal"
+                );
+
+
+            modal.classList.remove("show");
+
+
+            document.body.style.overflow =
+                "";
+
+        }
+
+
+        /* =========================================================
+           CLICK OUTSIDE QUICK VIEW
+        ========================================================= */
+
+        document
+            .getElementById("quickViewModal")
+            .addEventListener(
+                "click",
+                function (event) {
+
+                    if (
+                        event.target === this
+                    ) {
+
+                        closeQuickView();
+
+                    }
+
+                }
+            );
+
+
+        /* =========================================================
+           ESCAPE KEY
+        ========================================================= */
+
+        document.addEventListener(
+            "keydown",
+            function (event) {
+
+                if (
+                    event.key === "Escape"
+                ) {
+
+                    closeQuickView();
+
+                }
+
+            }
+        );
+
+
+        /* =========================================================
+           QUICK VIEW CART
+        ========================================================= */
+
+        function quickViewAddToCart() {
+
+            showToast(
+                "Product added to cart"
+            );
+
+        }
+
+
+        /* =========================================================
+           QUICK VIEW WISHLIST
+        ========================================================= */
+
+        function quickViewWishlist() {
+
+            showToast(
+                "Added to wishlist"
+            );
+
+        }
+
+
+        /* =========================================================
+           WISHLIST BUTTON
+        ========================================================= */
+
+        function toggleWishlist(button) {
+
+            button.classList.toggle(
+                "active"
+            );
+
+
+            const icon =
+                button.querySelector("i");
+
+
+            if (
+                button.classList.contains(
+                    "active"
+                )
+            ) {
+
+                icon.classList.remove(
+                    "fa-regular"
+                );
+
+                icon.classList.add(
+                    "fa-solid"
+                );
+
+                showToast(
+                    "Added to wishlist"
+                );
+
+            } else {
+
+                icon.classList.remove(
+                    "fa-solid"
+                );
+
+                icon.classList.add(
+                    "fa-regular"
+                );
+
+                showToast(
+                    "Removed from wishlist"
+                );
+
+            }
+
+        }
+
+
+        /* =========================================================
+           TOAST
+        ========================================================= */
+
+        function showToast(message) {
+
+            const toast =
+                document.getElementById(
+                    "toast"
+                );
+
+
+            toast.textContent =
+                message;
+
+
+            toast.classList.add(
+                "show"
+            );
+
+
+            setTimeout(
+                function () {
+
+                    toast.classList.remove(
+                        "show"
+                    );
+
+                },
+                2200
+            );
+
+        }
+
+
+        /* =========================================================
+           OWL CAROUSEL
+        ========================================================= */
+
+        $(document).ready(function () {
+
+
+            /* NEW ARRIVALS */
+
+            $(".new-arrivals-carousel").owlCarousel({
+
+                loop: true,
+
+                margin: 18,
+
+                nav: true,
+
+                dots: true,
+
+                autoplay: true,
+
+                autoplayTimeout: 4500,
+
+                autoplayHoverPause: true,
+
+                responsive: {
+
+                    0: {
+                        items: 1
+                    },
+
+                    576: {
+                        items: 2
+                    },
+
+                    992: {
+                        items: 3
+                    },
+
+                    1200: {
+                        items: 4
+                    }
+
+                }
+
+            });
+
+
+            /* BEST SELLING */
+
+            $(".best-selling-carousel").owlCarousel({
+
+                loop: true,
+
+                margin: 18,
+
+                nav: true,
+
+                dots: true,
+
+                autoplay: true,
+
+                autoplayTimeout: 4500,
+
+                autoplayHoverPause: true,
+
+                responsive: {
+
+                    0: {
+                        items: 1
+                    },
+
+                    576: {
+                        items: 2
+                    },
+
+                    992: {
+                        items: 3
+                    },
+
+                    1200: {
+                        items: 4
+                    }
+
+                }
+
+            });
+
+
+        });
+
+    </script>
+
+
+</body>
+
+</html>

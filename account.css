@@ -1,0 +1,439 @@
+
+        /* =========================================================
+           ACCOUNT OVERLAY
+        ========================================================= */
+
+        .account-overlay {
+            position: fixed;
+            inset: 0;
+
+            width: 100%;
+            height: 100vh;
+            height: 100dvh;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            padding: 20px;
+
+            background: rgba(15, 12, 10, 0.68);
+
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+
+            z-index: 99999;
+
+            opacity: 0;
+            visibility: hidden;
+
+            transition:
+                opacity 0.3s ease,
+                visibility 0.3s ease;
+        }
+
+        /* Open state */
+
+        .account-overlay.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+
+        /* =========================================================
+           ACCOUNT MODAL
+        ========================================================= */
+
+        .account-modal {
+            position: relative;
+
+            width: 100%;
+            max-width: 430px;
+
+           
+
+            border-radius: 18px;
+
+            padding: 42px 38px 38px;
+
+            box-shadow:
+                0 30px 80px rgba(0, 0, 0, 0.25);
+
+            transform: translateY(25px) scale(0.96);
+
+            transition: transform 0.35s ease;
+        }
+
+        .account-overlay.active .account-modal {
+            transform: translateY(0) scale(1);
+        }
+
+
+        /* =========================================================
+           CLOSE BUTTON
+        ========================================================= */
+
+        .close-account {
+            position: absolute;
+
+            top: 16px;
+            right: 16px;
+
+            width: 38px;
+            height: 38px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            border: none;
+            border-radius: 50%;
+
+            background: #f5f2ee;
+            color: #211b18;
+
+            font-size: 17px;
+
+            cursor: pointer;
+
+            transition: 0.3s ease;
+        }
+
+        .close-account:hover {
+            background: #211b18;
+            color: #ffffff;
+
+            transform: rotate(90deg);
+        }
+
+
+        /* =========================================================
+           MODAL HEADER
+        ========================================================= */
+
+        .account-header {
+            text-align: center;
+
+            margin-bottom: 28px;
+        }
+
+        .account-icon {
+            width: 65px;
+            height: 65px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            margin: 0 auto 18px;
+
+            border-radius: 50%;
+
+            background: #211b18;
+            color: #ffffff;
+
+            font-size: 23px;
+        }
+
+        .account-header span {
+            display: block;
+
+            margin-bottom: 7px;
+
+            font-size: 11px;
+            font-weight: 700;
+
+            letter-spacing: 2px;
+            text-transform: uppercase;
+
+            color: #9a8065;
+        }
+
+        .account-header h2 {
+            font-size: 28px;
+            font-weight: 600;
+
+            margin-bottom: 8px;
+        }
+
+        .account-header p {
+            color: #777;
+            font-size: 14px;
+            line-height: 1.6;
+        }
+
+
+        /* =========================================================
+           FORM
+        ========================================================= */
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+
+            margin-bottom: 8px;
+
+            font-size: 13px;
+            font-weight: 600;
+        }
+
+        .input-box {
+            position: relative;
+        }
+
+        .input-box i {
+            position: absolute;
+
+            left: 15px;
+            top: 50%;
+
+            transform: translateY(-50%);
+
+            color: #999;
+
+            font-size: 14px;
+        }
+
+        .input-box input {
+            width: 100%;
+            height: 48px;
+
+            padding: 0 15px 0 43px;
+
+            border: 1px solid #ddd6ce;
+            border-radius: 9px;
+
+            outline: none;
+
+            background: #faf9f7;
+            color: #211b18;
+
+            font-size: 14px;
+
+            transition: 0.3s ease;
+        }
+
+        .input-box input:focus {
+            border-color: #211b18;
+            background: #ffffff;
+
+            box-shadow: 0 0 0 3px rgba(33, 27, 24, 0.06);
+        }
+
+
+        /* =========================================================
+           FORM OPTIONS
+        ========================================================= */
+
+        .form-options {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 10px;
+
+            margin: 5px 0 22px;
+
+            font-size: 12px;
+        }
+
+        .remember {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+
+            color: #777;
+        }
+
+        .remember input {
+            accent-color: #211b18;
+        }
+
+        .forgot {
+            color: #211b18;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .forgot:hover {
+            text-decoration: underline;
+        }
+
+
+        /* =========================================================
+           LOGIN BUTTON
+        ========================================================= */
+
+        .login-button {
+            width: 100%;
+            height: 50px;
+
+            border: none;
+            border-radius: 9px;
+
+            background: #211b18;
+            color: #ffffff;
+
+            font-size: 13px;
+            font-weight: 700;
+
+            letter-spacing: 1px;
+            text-transform: uppercase;
+
+            cursor: pointer;
+
+            transition: 0.3s ease;
+        }
+
+        .login-button:hover {
+            background: #9a8065;
+            transform: translateY(-1px);
+        }
+
+
+        /* =========================================================
+           DIVIDER
+        ========================================================= */
+
+        .divider {
+            display: flex;
+            align-items: center;
+
+            gap: 12px;
+
+            margin: 25px 0;
+
+            color: #aaa;
+
+            font-size: 11px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: "";
+
+            flex: 1;
+
+            height: 1px;
+
+            background: #e7e1da;
+        }
+
+
+        /* =========================================================
+           REGISTER
+        ========================================================= */
+
+        .register-text {
+            text-align: center;
+
+            font-size: 13px;
+            color: #777;
+        }
+
+        .register-text a {
+            color: #211b18;
+
+            font-weight: 700;
+
+            text-decoration: none;
+        }
+
+        .register-text a:hover {
+            text-decoration: underline;
+        }
+
+
+        /* =========================================================
+           MOBILE RESPONSIVE
+        ========================================================= */
+
+        @media (max-width: 600px) {
+
+            .site-header {
+                height: 68px;
+                padding: 0 20px;
+            }
+
+            .logo {
+                font-size: 18px;
+                letter-spacing: 2px;
+            }
+
+            .nav-icon {
+                width: 42px;
+                height: 42px;
+            }
+
+            .demo-content {
+                min-height: calc(100vh - 68px);
+            }
+
+            .account-overlay {
+                padding: 15px;
+            }
+
+            .account-modal {
+                max-width: 100%;
+
+                padding: 38px 23px 28px;
+
+                border-radius: 16px;
+            }
+
+            .account-header {
+                margin-bottom: 23px;
+            }
+
+            .account-header h2 {
+                font-size: 25px;
+            }
+
+            .account-icon {
+                width: 58px;
+                height: 58px;
+                font-size: 21px;
+            }
+
+            .form-options {
+                align-items: flex-start;
+            }
+        }
+
+
+        /* Small mobile */
+
+        @media (max-width: 360px) {
+
+            .account-modal {
+                padding: 35px 18px 24px;
+            }
+
+            .account-header h2 {
+                font-size: 23px;
+            }
+
+            .form-options {
+                flex-direction: column;
+            }
+
+            .forgot {
+                align-self: flex-end;
+            }
+        }
+
+
+        /* =========================================================
+           PREVENT BODY SCROLL WHEN MODAL IS OPEN
+        ========================================================= */
+
+        body.modal-open {
+            overflow: hidden;
+        }
+
+   

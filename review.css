@@ -1,0 +1,696 @@
+/* =========================================================
+           ROOT
+        ========================================================= */
+
+:root {
+    --black: #111111;
+    --dark: #181818;
+    --dark-soft: #222222;
+    --cream: #f7f3ec;
+    --cream-dark: #ebe4d8;
+    --white: #ffffff;
+    --gold: #b89258;
+    --gold-light: #d8bd8c;
+    --text: #191919;
+    --muted: #77716a;
+    --border: rgba(184, 146, 88, 0.25);
+}
+
+
+/* =========================================================
+           RESET
+        ========================================================= */
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--cream);
+    color: var(--text);
+    font-family: "DM Sans", sans-serif;
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+           MAIN STACK WRAPPER
+        ========================================================= */
+
+.stack-wrapper {
+    width: min(1180px, 92%);
+    margin: 0 auto;
+    padding: 120px 0 160px;
+}
+
+
+/* =========================================================
+           HEADING
+        ========================================================= */
+
+.reviews-heading {
+    width: min(720px, 100%);
+    margin: 0 auto 90px;
+    text-align: center;
+}
+
+
+
+.reviews-heading h1 {
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(42px, 6vw, 72px);
+
+    line-height: 0.98;
+    font-weight: 500;
+
+    letter-spacing: -0.04em;
+
+    color: var(--black);
+
+    margin-bottom: 28px;
+}
+
+.heading-line {
+    width: 65px;
+    height: 2px;
+
+    margin: 0 auto 27px;
+
+    background: var(--gold);
+}
+
+.reviews-heading p {
+    max-width: 620px;
+    margin: auto;
+
+    color: var(--muted);
+
+    font-size: 15px;
+    line-height: 1.9;
+}
+
+
+/* =========================================================
+           STACK AREA
+        ========================================================= */
+
+.stack-card {
+    position: sticky;
+
+    top: 100px;
+
+    width: 100%;
+
+    min-height: 470px;
+
+    margin-bottom: 35px;
+
+    border-radius: 0px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.08),
+        0 4px 15px rgba(0, 0, 0, 0.04);
+
+    transition:
+        transform 0.5s ease,
+        box-shadow 0.5s ease;
+}
+
+.stack-card:hover {
+    transform: translateY(-5px);
+    box-shadow:
+        0 30px 70px rgba(0, 0, 0, 0.13),
+        0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+
+/* =========================================================
+           CARD COLORS
+        ========================================================= */
+
+.dark-card {
+    background:
+        radial-gradient(circle at 90% 10%,
+            rgba(184, 146, 88, 0.13),
+            transparent 35%),
+        linear-gradient(135deg,
+            #fffdf9,
+            #f0eadf);
+
+    color: var(--text);
+}
+
+.light-card {
+    background:
+        radial-gradient(circle at 90% 10%,
+            rgba(184, 146, 88, 0.13),
+            transparent 35%),
+        linear-gradient(135deg,
+            #fffdf9,
+            #f0eadf);
+
+    color: var(--text);
+}
+
+
+/* =========================================================
+           INNER REVIEW CARD
+        ========================================================= */
+
+.review-card {
+    min-height: 470px;
+
+    padding: 55px 65px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    position: relative;
+}
+
+.review-card::before {
+    content: "“";
+
+    position: absolute;
+
+    top: 20px;
+    right: 50px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 170px;
+    line-height: 1;
+
+    color: var(--gold);
+
+    opacity: 0.10;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+           TOP AREA
+        ========================================================= */
+
+.review-top {
+    display: flex;
+    align-items: center;
+
+    gap: 18px;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================================================
+           AVATAR
+        ========================================================= */
+
+.customer-avatar {
+    width: 65px;
+    height: 65px;
+
+    flex: 0 0 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(145deg,
+            var(--gold),
+            #8d6937);
+
+    color: #ffffff;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    box-shadow:
+        0 8px 25px rgba(184, 146, 88, 0.25);
+
+    border: 2px solid rgba(255, 255, 255, 0.15);
+}
+
+
+/* =========================================================
+           CUSTOMER INFO
+        ========================================================= */
+
+.customer-info {
+    flex: 1;
+}
+
+.customer-info h3 {
+    margin-bottom: 5px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: 22px;
+    font-weight: 600;
+
+    letter-spacing: -0.01em;
+}
+
+.customer-info span {
+    display: block;
+
+    font-size: 12px;
+
+    letter-spacing: 0.04em;
+
+    opacity: 0.6;
+}
+
+
+/* =========================================================
+           VERIFIED
+        ========================================================= */
+
+.verified {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+
+    padding: 8px 13px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 50px;
+
+    color: var(--gold);
+
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing: 0.05em;
+
+    white-space: nowrap;
+}
+
+.verified i {
+    font-size: 13px;
+}
+
+
+/* =========================================================
+           RATING
+        ========================================================= */
+
+.review-rating {
+    margin-top: 50px;
+    margin-bottom: 22px;
+
+    position: relative;
+    z-index: 2;
+}
+
+.stars {
+    color: var(--gold-light);
+
+    font-size: 20px;
+
+    letter-spacing: 5px;
+}
+
+
+/* =========================================================
+           REVIEW TEXT
+        ========================================================= */
+
+.review-text {
+    max-width: 850px;
+
+    font-family: "Playfair Display", serif;
+
+    font-size: clamp(25px, 3vw, 38px);
+
+    line-height: 1.45;
+
+    letter-spacing: -0.025em;
+
+    position: relative;
+    z-index: 2;
+}
+
+
+/* =========================================================
+           FOOTER
+        ========================================================= */
+
+.review-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding-top: 25px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.13);
+
+    position: relative;
+    z-index: 2;
+}
+
+.light-card .review-footer {
+    border-top-color: rgba(0, 0, 0, 0.10);
+}
+
+.review-number {
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 0.20em;
+
+    color: var(--gold);
+}
+
+.review-product {
+    font-size: 11px;
+    font-weight: 600;
+
+    letter-spacing: 0.08em;
+
+    text-transform: uppercase;
+
+    opacity: 0.55;
+
+    text-align: right;
+}
+
+
+/* =========================================================
+           STACK DEPTH
+        ========================================================= */
+
+.stack-card:nth-of-type(2) {
+    top: 110px;
+}
+
+.stack-card:nth-of-type(3) {
+    top: 120px;
+}
+
+.stack-card:nth-of-type(4) {
+    top: 130px;
+}
+
+.stack-card:nth-of-type(5) {
+    top: 140px;
+}
+
+
+/* =========================================================
+           DECORATIVE CORNERS
+        ========================================================= */
+
+.stack-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 22px;
+    left: 22px;
+
+    width: 50px;
+    height: 50px;
+
+    border-top: 1px solid var(--gold);
+    border-left: 1px solid var(--gold);
+
+    opacity: 0.45;
+
+    z-index: 3;
+
+    pointer-events: none;
+}
+
+.stack-card::after {
+    content: "";
+
+    position: absolute;
+
+    right: 22px;
+    bottom: 22px;
+
+    width: 50px;
+    height: 50px;
+
+    border-right: 1px solid var(--gold);
+    border-bottom: 1px solid var(--gold);
+
+    opacity: 0.45;
+
+    z-index: 3;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+           RESPONSIVE TABLET
+        ========================================================= */
+
+@media (max-width: 900px) {
+
+    .stack-wrapper {
+        padding: 90px 0 120px;
+    }
+
+    .reviews-heading {
+        margin-bottom: 65px;
+    }
+
+    .review-card {
+        padding: 45px;
+    }
+
+    .review-text {
+        font-size: 29px;
+    }
+
+    .verified {
+        padding: 7px 10px;
+    }
+}
+
+
+/* =========================================================
+           MOBILE
+        ========================================================= */
+
+@media (max-width: 600px) {
+
+    .stack-wrapper {
+        width: 92%;
+        padding: 70px 0 90px;
+    }
+
+    .reviews-heading {
+        margin-bottom: 45px;
+    }
+
+    .reviews-eyebrow {
+        font-size: 9px;
+        letter-spacing: 0.16em;
+    }
+
+    .reviews-eyebrow::before,
+    .reviews-eyebrow::after {
+        width: 20px;
+    }
+
+    .reviews-eyebrow::before {
+        margin-right: 9px;
+    }
+
+    .reviews-eyebrow::after {
+        margin-left: 9px;
+    }
+
+    .reviews-heading h1 {
+        font-size: 43px;
+        line-height: 1;
+    }
+
+    .reviews-heading p {
+        font-size: 13px;
+        line-height: 1.8;
+    }
+
+
+    /* CARD */
+
+    .stack-card {
+        top: 75px !important;
+
+        min-height: 480px;
+
+        margin-bottom: 25px;
+
+        border-radius: 22px;
+    }
+
+    .review-card {
+        min-height: 480px;
+
+        padding: 35px 25px;
+    }
+
+
+    /* TOP */
+
+    .review-top {
+        gap: 12px;
+
+        align-items: flex-start;
+    }
+
+    .customer-avatar {
+        width: 50px;
+        height: 50px;
+
+        flex-basis: 50px;
+
+        font-size: 15px;
+    }
+
+    .customer-info h3 {
+        font-size: 18px;
+    }
+
+    .customer-info span {
+        font-size: 10px;
+        line-height: 1.4;
+    }
+
+
+    /* VERIFIED */
+
+    .verified {
+        padding: 6px 8px;
+
+        font-size: 9px;
+
+        gap: 4px;
+    }
+
+    .verified i {
+        font-size: 10px;
+    }
+
+
+    /* RATING */
+
+    .review-rating {
+        margin-top: 38px;
+        margin-bottom: 18px;
+    }
+
+    .stars {
+        font-size: 16px;
+        letter-spacing: 3px;
+    }
+
+
+    /* TEXT */
+
+    .review-text {
+        font-size: 23px;
+
+        line-height: 1.48;
+    }
+
+
+    /* FOOTER */
+
+    .review-footer {
+        align-items: flex-start;
+        flex-direction: column;
+
+        gap: 9px;
+
+        padding-top: 20px;
+    }
+
+    .review-product {
+        text-align: left;
+        font-size: 9px;
+    }
+
+
+    /* QUOTE */
+
+    .review-card::before {
+        right: 15px;
+        top: 30px;
+
+        font-size: 110px;
+    }
+
+
+    /* CORNERS */
+
+    .stack-card::before {
+        width: 35px;
+        height: 35px;
+
+        top: 15px;
+        left: 15px;
+    }
+
+    .stack-card::after {
+        width: 35px;
+        height: 35px;
+
+        right: 15px;
+        bottom: 15px;
+    }
+}
+
+
+/* =========================================================
+           SMALL MOBILE
+        ========================================================= */
+
+@media (max-width: 400px) {
+
+    .reviews-heading h1 {
+        font-size: 37px;
+    }
+
+    .review-card {
+        padding: 30px 20px;
+    }
+
+    .review-text {
+        font-size: 21px;
+    }
+
+    .customer-avatar {
+        width: 46px;
+        height: 46px;
+
+        flex-basis: 46px;
+    }
+
+    .customer-info h3 {
+        font-size: 16px;
+    }
+
+    .verified {
+        font-size: 8px;
+    }
+}

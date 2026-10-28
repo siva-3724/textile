@@ -1,0 +1,3325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVENZA TEXTILES || collection</title>
+    <meta name="description"
+        content="Explore our exclusive collection of premium sarees including Kanchipuram Silk, Banarasi, Organza, Cotton, Linen, Chanderi and more.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="catelog.css">
+</head>
+
+<body>
+    <!-- =========================================================
+     TOP BAR
+========================================================= -->
+
+    <div class="top-bar">
+        ✦ FREE SHIPPING ON ORDERS ABOVE ₹1,999 &nbsp; • &nbsp; HANDPICKED SAREES FOR EVERY OCCASION ✦
+    </div>
+
+
+    <!-- =========================================================
+     NAVBAR
+========================================================= -->
+
+    <header class="navbar">
+
+        <div class="nav-inner container">
+
+
+            <!-- BRAND -->
+
+            <a href="index.html" class="brand">
+
+                <div class="brand-mark">
+                    A
+                </div>
+
+                <div class="brand-text">
+
+                    <strong>
+                        AVENZA
+                    </strong>
+
+                    <span>
+                        TEXTILES
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <!-- NAVIGATION -->
+
+            <nav class="nav-links" id="mobileNav">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="#new-arrivals">
+                    New Arrivals
+                </a>
+
+                <a href="#best-selling">
+                    Best Selling
+                </a>
+
+                <a href="catelog.html">
+                    Collections
+                </a>
+
+                <a href="about.html">
+                    About Us
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </nav>
+
+
+            <!-- RIGHT SIDE -->
+
+            <div class="nav-icons">
+
+
+
+
+
+                <!-- ACCOUNT -->
+
+                <a href="#" class="nav-icon" aria-label="Account" onclick="openAccount(event)">
+
+                    <i class="fa-regular fa-user"></i>
+
+                </a>
+
+
+                <div class="account-overlay" id="accountOverlay">
+
+                    <div class="account-modal">
+
+                        <!-- CLOSE BUTTON -->
+                        <button class="account-close" onclick="closeAccount()" aria-label="Close Account">
+
+                            <i class="fa-solid fa-xmark"></i>
+
+                        </button>
+
+
+                        <!-- ACCOUNT ICON -->
+                        <div class="account-icon">
+
+                            <i class="fa-regular fa-user"></i>
+
+                        </div>
+
+
+                        <!-- CONTENT -->
+                        <div class="account-content">
+
+                            <span class="account-label">
+                                WELCOME BACK
+                            </span>
+
+                            <h2>
+                                My Account
+                            </h2>
+
+                            <p>
+                                Sign in to manage your orders,
+                                wishlist and personal details.
+                            </p>
+
+
+                            <!-- LOGIN -->
+                            <a href="#" class="account-btn account-login">
+
+                                <i class="fa-solid fa-arrow-right-to-bracket"></i>
+
+                                Sign In
+
+                            </a>
+
+
+                            <!-- REGISTER -->
+                            <a href="#" class="account-btn account-register">
+
+                                Create an Account
+
+                            </a>
+
+
+                            <!-- EXTRA LINKS -->
+                            <div class="account-links">
+
+                                <a href="#">
+                                    <i class="fa-solid fa-box"></i>
+                                    My Orders
+                                </a>
+
+                                <a href="#">
+                                    <i class="fa-regular fa-heart"></i>
+                                    Wishlist
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <style>
+                    .account-overlay {
+                        position: fixed;
+
+                        inset: 0;
+
+                        width: 100%;
+                        height: 100dvh;
+
+                        background: rgba(20, 16, 13, 0.72);
+
+                        backdrop-filter: blur(10px);
+                        -webkit-backdrop-filter: blur(10px);
+
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        padding: 20px;
+
+                        opacity: 0;
+                        visibility: hidden;
+                        pointer-events: none;
+
+                        transition:
+                            opacity .35s ease,
+                            visibility .35s ease;
+
+                        z-index: 99999;
+                    }
+
+
+                    /* OPEN */
+
+                    .account-overlay.active {
+                        opacity: 1;
+
+                        visibility: visible;
+
+                        pointer-events: auto;
+                    }
+
+
+
+                    .account-modal {
+                        position: relative;
+
+                        width: 100%;
+                        max-width: 430px;
+
+                        background: #ffffff;
+
+                        padding: 45px 40px 40px;
+
+                        border-radius: 20px;
+
+                        text-align: center;
+
+                        box-shadow:
+                            0 30px 80px rgba(0, 0, 0, .30);
+
+                        transform: translateY(35px) scale(.96);
+
+                        transition: transform .35s ease;
+                    }
+
+                    .account-overlay.active .account-modal {
+                        transform: translateY(0) scale(1);
+                    }
+
+
+
+                    .account-close {
+                        position: absolute;
+
+                        top: 15px;
+                        right: 15px;
+
+                        width: 40px;
+                        height: 40px;
+
+                        border: none;
+
+                        border-radius: 50%;
+
+                        background: #f4f1ed;
+
+                        color: #211b18;
+
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        cursor: pointer;
+
+                        font-size: 17px;
+
+                        transition: .3s ease;
+                    }
+
+                    .account-close:hover {
+                        background: #211b18;
+
+                        color: #ffffff;
+
+                        transform: rotate(90deg);
+                    }
+
+
+
+
+                    .account-icon {
+                        width: 68px;
+                        height: 68px;
+
+                        margin: 0 auto 20px;
+
+                        border-radius: 50%;
+
+                        background: #f5f1eb;
+
+                        color: #9b6b3d;
+
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        font-size: 25px;
+                    }
+
+
+
+                    .account-label {
+                        display: block;
+
+                        margin-bottom: 10px;
+
+                        color: #9b6b3d;
+
+                        font-size: 11px;
+
+                        font-weight: 600;
+
+                        letter-spacing: 3px;
+                    }
+
+                    .account-content h2 {
+                        margin: 0 0 10px;
+
+                        color: #211b18;
+
+                        font-size: 32px;
+
+                        font-weight: 500;
+                    }
+
+                    .account-content p {
+                        margin: 0 auto 28px;
+
+                        max-width: 330px;
+
+                        color: #777;
+
+                        font-size: 14px;
+
+                        line-height: 1.7;
+                    }
+
+
+
+                    .account-btn {
+                        width: 100%;
+
+                        min-height: 52px;
+
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        gap: 10px;
+
+                        margin-bottom: 12px;
+
+                        border-radius: 8px;
+
+                        text-decoration: none;
+
+                        font-size: 14px;
+
+                        transition: .3s ease;
+                    }
+
+
+                    /* LOGIN */
+
+                    .account-login {
+                        background: #211b18;
+
+                        color: #ffffff;
+                    }
+
+                    .account-login:hover {
+                        background: #9b6b3d;
+
+                        color: #ffffff;
+
+                        transform: translateY(-2px);
+                    }
+
+
+                    /* REGISTER */
+
+                    .account-register {
+                        border: 1px solid #dcd7d1;
+
+                        background: #ffffff;
+
+                        color: #211b18;
+                    }
+
+                    .account-register:hover {
+                        background: #f5f1eb;
+
+                        border-color: #211b18;
+
+                        color: #211b18;
+                    }
+
+
+
+
+                    .account-links {
+                        display: flex;
+
+                        justify-content: center;
+
+                        gap: 25px;
+
+                        margin-top: 25px;
+
+                        padding-top: 20px;
+
+                        border-top: 1px solid #eeeeee;
+                    }
+
+                    .account-links a {
+                        display: flex;
+
+                        align-items: center;
+
+                        gap: 7px;
+
+                        color: #666;
+
+                        text-decoration: none;
+
+                        font-size: 12px;
+
+                        transition: .3s ease;
+                    }
+
+                    .account-links a:hover {
+                        color: #9b6b3d;
+                    }
+
+
+
+
+                    @media (max-width: 600px) {
+
+                        .account-overlay {
+                            padding: 15px;
+                        }
+
+                        .account-modal {
+                            max-width: 100%;
+
+                            padding: 42px 22px 25px;
+
+                            border-radius: 16px;
+                        }
+
+                        .account-icon {
+                            width: 60px;
+                            height: 60px;
+
+                            font-size: 22px;
+                        }
+
+                        .account-content h2 {
+                            font-size: 28px;
+                        }
+
+                        .account-content p {
+                            font-size: 13px;
+                        }
+
+                        .account-links {
+                            gap: 18px;
+                        }
+
+                    }
+                </style>
+                <script>
+
+                    const accountOverlay =
+                        document.getElementById("accountOverlay");
+
+
+                    /* OPEN ACCOUNT */
+
+                    function openAccount(event) {
+
+                        event.preventDefault();
+
+                        accountOverlay.classList.add("active");
+
+                        document.body.style.overflow = "hidden";
+                    }
+
+
+                    /* CLOSE ACCOUNT */
+
+                    function closeAccount() {
+
+                        accountOverlay.classList.remove("active");
+
+                        document.body.style.overflow = "";
+                    }
+
+
+                    /* CLICK OUTSIDE */
+
+                    accountOverlay.addEventListener("click", function (event) {
+
+                        if (event.target === accountOverlay) {
+
+                            closeAccount();
+
+                        }
+
+                    });
+
+
+                    /* ESC KEY */
+
+                    document.addEventListener("keydown", function (event) {
+
+                        if (
+                            event.key === "Escape" &&
+                            accountOverlay.classList.contains("active")
+                        ) {
+
+                            closeAccount();
+
+                        }
+
+                    });
+
+                </script>
+
+
+
+                <!-- CART -->
+                <a href="#" class="nav-icon" aria-label="Cart" onclick="openCart(event)">
+
+                    <i class="fa-solid fa-bag-shopping"></i>
+
+                    <span class="count">
+                        2
+                    </span>
+
+                </a>
+
+                <div class="cart-overlay" id="cartOverlay">
+
+                    <div class="cart-modal">
+
+                        <!-- CART HEADER -->
+                        <div class="cart-header">
+
+                            <div>
+                                <span class="cart-label">
+                                    YOUR SHOPPING BAG
+                                </span>
+
+                                <h2>
+                                    My Cart
+                                </h2>
+                            </div>
+
+                            <button class="cart-close" onclick="closeCart()" aria-label="Close Cart">
+
+                                <i class="fa-solid fa-xmark"></i>
+
+                            </button>
+
+                        </div>
+
+
+                        <!-- CART ITEMS -->
+                        <div class="cart-items">
+
+
+                            <!-- ITEM 1 -->
+                            <div class="cart-item">
+
+                                <div class="cart-product-image">
+
+                                    <img src="https://i.pinimg.com/1200x/6b/bf/99/6bbf99965fc7a1f6ef852238a1d65d96.jpg"
+                                        alt="Kanchipuram Wedding Silk Saree">
+
+                                </div>
+
+
+                                <div class="cart-product-info">
+
+                                    <h3>
+                                        Premium Silk Saree
+                                    </h3>
+
+                                    <p>
+                                        Traditional Collection
+                                    </p>
+
+                                    <div class="cart-bottom">
+
+                                        <div class="quantity">
+
+                                            <button onclick="changeQuantity(this, -1)">
+                                                −
+                                            </button>
+
+                                            <span>
+                                                1
+                                            </span>
+
+                                            <button onclick="changeQuantity(this, 1)">
+                                                +
+                                            </button>
+
+                                        </div>
+
+                                        <strong>
+                                            ₹5,499
+                                        </strong>
+
+                                    </div>
+
+                                </div>
+
+
+                                <button class="remove-item" onclick="removeCartItem(this)" aria-label="Remove item">
+
+                                    <i class="fa-solid fa-trash"></i>
+
+                                </button>
+
+                            </div>
+
+
+                            <!-- ITEM 2 -->
+                            <div class="cart-item">
+
+                                <div class="cart-product-image">
+
+                                    <img src="https://i.pinimg.com/1200x/70/55/1f/70551f3761d82cb2456e34be579389fb.jpg"
+                                        alt="Royal Kanchipuram Silk Saree">
+
+                                </div>
+
+
+                                <div class="cart-product-info">
+
+                                    <h3>
+                                        Kanchipuram Silk Saree
+                                    </h3>
+
+                                    <p>
+                                        Wedding Collection
+                                    </p>
+
+                                    <div class="cart-bottom">
+
+                                        <div class="quantity">
+
+                                            <button onclick="changeQuantity(this, -1)">
+                                                −
+                                            </button>
+
+                                            <span>
+                                                1
+                                            </span>
+
+                                            <button onclick="changeQuantity(this, 1)">
+                                                +
+                                            </button>
+
+                                        </div>
+
+                                        <strong>
+                                            ₹4,999
+                                        </strong>
+
+                                    </div>
+
+                                </div>
+
+
+                                <button class="remove-item" onclick="removeCartItem(this)" aria-label="Remove item">
+
+                                    <i class="fa-solid fa-trash"></i>
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- CART FOOTER -->
+                        <div class="cart-footer">
+
+                            <div class="cart-summary">
+
+                                <span>
+                                    Subtotal
+                                </span>
+
+                                <strong id="cartTotal">
+                                    ₹10,498
+                                </strong>
+
+                            </div>
+
+                            <p class="shipping-note">
+                                Shipping and taxes calculated at checkout.
+                            </p>
+
+
+                            <a href="buynow.html" class="checkout-btn">
+
+                                Proceed to Checkout
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </a>
+
+
+                            <a href="#" class="view-cart-btn">
+
+                                View Full Cart
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <style>
+                    .cart-overlay {
+                        position: fixed;
+                        inset: 0;
+
+                        width: 100%;
+                        height: 100dvh;
+
+                        background: rgba(20, 16, 13, 0.68);
+
+                        backdrop-filter: blur(8px);
+                        -webkit-backdrop-filter: blur(8px);
+
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        padding: 20px;
+
+                        opacity: 0;
+                        visibility: hidden;
+                        pointer-events: none;
+
+                        transition:
+                            opacity .35s ease,
+                            visibility .35s ease;
+
+                        z-index: 99999;
+                    }
+
+                    .cart-overlay.active {
+                        opacity: 1;
+                        visibility: visible;
+                        pointer-events: auto;
+                    }
+
+
+
+
+                    .cart-modal {
+                        width: 100%;
+                        max-width: 650px;
+                        max-height: 90vh;
+
+                        background: #ffffff;
+
+                        border-radius: 20px;
+
+                        overflow: hidden;
+
+                        box-shadow:
+                            0 30px 80px rgba(0, 0, 0, .30);
+
+                        transform: translateY(35px) scale(.96);
+
+                        transition: transform .35s ease;
+
+                        display: flex;
+                        flex-direction: column;
+                    }
+
+                    .cart-overlay.active .cart-modal {
+                        transform: translateY(0) scale(1);
+                    }
+
+
+
+
+                    .cart-header {
+                        display: flex;
+
+                        align-items: center;
+                        justify-content: space-between;
+
+                        padding: 28px 30px 22px;
+
+                        border-bottom: 1px solid #eeeeee;
+                    }
+
+                    .cart-label {
+                        display: block;
+
+                        margin-bottom: 7px;
+
+                        color: #9b6b3d;
+
+                        font-size: 10px;
+
+                        letter-spacing: 2.5px;
+
+                        font-weight: 600;
+                    }
+
+                    .cart-header h2 {
+                        margin: 0;
+
+                        color: #211b18;
+
+                        font-size: 30px;
+
+                        font-weight: 500;
+                    }
+
+
+
+
+                    .cart-close {
+                        width: 40px;
+                        height: 40px;
+
+                        border: none;
+
+                        border-radius: 50%;
+
+                        background: #f4f1ed;
+
+                        color: #211b18;
+
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        cursor: pointer;
+
+                        font-size: 17px;
+
+                        transition: .3s ease;
+                    }
+
+                    .cart-close:hover {
+                        background: #211b18;
+
+                        color: #ffffff;
+
+                        transform: rotate(90deg);
+                    }
+
+
+
+
+                    .cart-items {
+                        padding: 10px 30px;
+
+                        overflow-y: auto;
+
+                        flex: 1;
+                    }
+
+                    .cart-item {
+                        position: relative;
+
+                        display: flex;
+
+                        gap: 16px;
+
+                        padding: 18px 0;
+
+                        border-bottom: 1px solid #eeeeee;
+                    }
+
+                    .cart-product-image {
+                        width: 95px;
+                        height: 115px;
+
+                        flex-shrink: 0;
+
+                        overflow: hidden;
+
+                        border-radius: 8px;
+
+                        background: #f5f2ee;
+                    }
+
+                    .cart-product-image img {
+                        width: 100%;
+                        height: 100%;
+
+                        display: block;
+
+                        object-fit: cover;
+                    }
+
+
+
+
+                    .cart-product-info {
+                        flex: 1;
+
+                        padding-right: 25px;
+                    }
+
+                    .cart-product-info h3 {
+                        margin: 2px 0 6px;
+
+                        color: #211b18;
+
+                        font-size: 15px;
+
+                        font-weight: 600;
+                    }
+
+                    .cart-product-info p {
+                        margin: 0 0 15px;
+
+                        color: #888;
+
+                        font-size: 12px;
+                    }
+
+
+
+                    .cart-bottom {
+                        display: flex;
+
+                        align-items: center;
+                        justify-content: space-between;
+                    }
+
+                    .cart-bottom strong {
+                        color: #211b18;
+
+                        font-size: 15px;
+                    }
+
+
+
+
+                    .quantity {
+                        display: flex;
+
+                        align-items: center;
+
+                        border: 1px solid #ddd;
+
+                        border-radius: 5px;
+
+                        overflow: hidden;
+                    }
+
+                    .quantity button {
+                        width: 30px;
+                        height: 28px;
+
+                        border: none;
+
+                        background: #ffffff;
+
+                        color: #211b18;
+
+                        cursor: pointer;
+
+                        font-size: 15px;
+                    }
+
+                    .quantity button:hover {
+                        background: #f5f2ee;
+                    }
+
+                    .quantity span {
+                        min-width: 30px;
+
+                        text-align: center;
+
+                        font-size: 12px;
+                    }
+
+
+
+
+                    .remove-item {
+                        position: absolute;
+
+                        top: 18px;
+                        right: 0;
+
+                        border: none;
+
+                        background: transparent;
+
+                        color: #aaa;
+
+                        cursor: pointer;
+
+                        font-size: 12px;
+
+                        transition: .3s ease;
+                    }
+
+                    .remove-item:hover {
+                        color: #b44b3b;
+                    }
+
+
+
+
+                    .cart-footer {
+                        padding: 22px 30px 28px;
+
+                        background: #faf8f4;
+
+                        border-top: 1px solid #eeeeee;
+                    }
+
+                    .cart-summary {
+                        display: flex;
+
+                        align-items: center;
+                        justify-content: space-between;
+
+                        color: #211b18;
+
+                        font-size: 15px;
+                    }
+
+                    .cart-summary strong {
+                        font-size: 20px;
+                    }
+
+                    .shipping-note {
+                        margin: 7px 0 18px;
+
+                        color: #888;
+
+                        font-size: 11px;
+                    }
+
+
+                    .checkout-btn {
+                        width: 100%;
+                        height: 52px;
+
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        gap: 10px;
+
+                        border-radius: 7px;
+
+                        background: #211b18;
+
+                        color: #ffffff;
+
+                        text-decoration: none;
+
+                        font-size: 13px;
+
+                        transition: .3s ease;
+                    }
+
+                    .checkout-btn:hover {
+                        background: #9b6b3d;
+
+                        color: #ffffff;
+
+                        transform: translateY(-2px);
+                    }
+
+
+
+
+                    .view-cart-btn {
+                        display: block;
+
+                        margin-top: 13px;
+
+                        text-align: center;
+
+                        color: #211b18;
+
+                        text-decoration: none;
+
+                        font-size: 12px;
+
+                        transition: .3s ease;
+                    }
+
+                    .view-cart-btn:hover {
+                        color: #9b6b3d;
+                    }
+
+
+
+
+                    @media (max-width: 600px) {
+
+                        .cart-overlay {
+                            padding: 12px;
+                        }
+
+                        .cart-modal {
+                            max-height: 94vh;
+
+                            border-radius: 16px;
+                        }
+
+                        .cart-header {
+                            padding: 22px 20px 18px;
+                        }
+
+                        .cart-header h2 {
+                            font-size: 25px;
+                        }
+
+                        .cart-items {
+                            padding: 5px 20px;
+                        }
+
+                        .cart-item {
+                            gap: 12px;
+                        }
+
+                        .cart-product-image {
+                            width: 75px;
+                            height: 95px;
+                        }
+
+                        .cart-product-info h3 {
+                            font-size: 13px;
+                        }
+
+                        .cart-product-info p {
+                            font-size: 11px;
+                            margin-bottom: 10px;
+                        }
+
+                        .cart-footer {
+                            padding: 18px 20px 22px;
+                        }
+
+                    }
+                </style>
+                <script>
+
+                    const cartOverlay =
+                        document.getElementById("cartOverlay");
+
+
+                    /* OPEN CART */
+
+                    function openCart(event) {
+
+                        event.preventDefault();
+
+                        cartOverlay.classList.add("active");
+
+                        document.body.style.overflow = "hidden";
+                    }
+
+
+                    /* CLOSE CART */
+
+                    function closeCart() {
+
+                        cartOverlay.classList.remove("active");
+
+                        document.body.style.overflow = "";
+                    }
+
+
+                    /* CLICK OUTSIDE */
+
+                    cartOverlay.addEventListener("click", function (event) {
+
+                        if (event.target === cartOverlay) {
+
+                            closeCart();
+
+                        }
+
+                    });
+
+
+                    /* ESC KEY */
+
+                    document.addEventListener("keydown", function (event) {
+
+                        if (
+                            event.key === "Escape" &&
+                            cartOverlay.classList.contains("active")
+                        ) {
+
+                            closeCart();
+
+                        }
+
+                    });
+
+
+                    /* QUANTITY */
+
+                    function changeQuantity(button, amount) {
+
+                        const quantityBox =
+                            button.parentElement;
+
+                        const quantityText =
+                            quantityBox.querySelector("span");
+
+                        let quantity =
+                            parseInt(quantityText.textContent);
+
+                        quantity += amount;
+
+                        if (quantity < 1) {
+                            quantity = 1;
+                        }
+
+                        quantityText.textContent = quantity;
+                    }
+
+
+                    /* REMOVE ITEM */
+
+                    function removeCartItem(button) {
+
+                        const item =
+                            button.closest(".cart-item");
+
+                        item.remove();
+
+                        updateCartCount();
+
+                    }
+
+
+                    /* UPDATE BADGE */
+
+                    function updateCartCount() {
+
+                        const items =
+                            document.querySelectorAll(".cart-item");
+
+                        const count =
+                            document.querySelector(".nav-icon .count");
+
+                        if (count) {
+
+                            count.textContent = items.length;
+
+                        }
+
+                    }
+
+                </script>
+
+
+
+                <!-- MOBILE MENU -->
+
+                <button class="menu-btn" id="menuBtn" onclick="toggleMenu()" aria-label="Open menu"
+                    aria-expanded="false">
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================================
+     HERO
+========================================================= -->
+
+    <section class="catalog-hero">
+
+        <div class="container">
+
+            <div class="hero-content">
+
+                <div class="hero-label">
+                    The Grand Saree Collection
+                </div>
+
+                <h1>
+                    Avenza of
+                    <span>Elegance</span>
+                </h1>
+
+                <p>
+                    Discover a thoughtfully curated collection of timeless
+                    sarees — from rich Kanchipuram silks and regal Banarasis
+                    to graceful linens, organzas and everyday cottons.
+                    Every weave tells a story.
+                </p>
+
+            </div>
+
+        </div>
+
+        <div class="hero-decoration"></div>
+
+    </section>
+
+
+    <!-- =========================================================
+     COLLECTION TITLE
+========================================================= -->
+
+    <section id="catalog">
+
+        <div class="container">
+
+            <div class="collection-heading">
+
+                <div class="eyebrow" style="color:  #a33c3c;">
+                    Curated For You
+                </div>
+
+                <h2>
+                    The Saree Edit
+                </h2>
+
+                <p>
+                    Explore 100 distinctive sarees designed for celebrations,
+                    weddings, festivities, everyday elegance and unforgettable
+                    occasions.
+                </p>
+
+            </div>
+            <!-- =====================================================
+             FILTER PANEL
+        ===================================================== -->
+
+            <div class="filter-panel">
+
+                <div class="filter-top">
+
+                    <div class="search-box">
+
+                        <i class="fa-solid fa-magnifying-glass"></i>
+
+                        <input type="search" id="searchInput" placeholder="Search sarees, silk, cotton, banarasi..."
+                            oninput="filterProducts()">
+
+                    </div>
+
+
+                    <select class="filter-select" id="categoryFilter" onchange="filterProducts()">
+
+                        <option value="all">All Categories</option>
+                        <option value="Kanchipuram Silk">Kanchipuram Silk</option>
+                        <option value="Banarasi Silk">Banarasi Silk</option>
+                        <option value="Cotton">Cotton</option>
+                        <option value="Organza">Organza</option>
+                        <option value="Chiffon">Chiffon</option>
+                        <option value="Georgette">Georgette</option>
+                        <option value="Linen">Linen</option>
+                        <option value="Chanderi">Chanderi</option>
+                        <option value="Paithani">Paithani</option>
+                        <option value="Tussar Silk">Tussar Silk</option>
+
+                    </select>
+
+
+                    <select class="filter-select" id="priceFilter" onchange="filterProducts()">
+
+                        <option value="all">All Prices</option>
+                        <option value="0-1500">Under ₹1,500</option>
+                        <option value="1500-3000">₹1,500 – ₹3,000</option>
+                        <option value="3000-5000">₹3,000 – ₹5,000</option>
+                        <option value="5000-10000">₹5,000 – ₹10,000</option>
+                        <option value="10000-999999">Above ₹10,000</option>
+
+                    </select>
+
+
+                    <select class="filter-select" id="sortFilter" onchange="sortProducts()">
+
+                        <option value="default">Sort: Featured</option>
+                        <option value="low">Price: Low to High</option>
+                        <option value="high">Price: High to Low</option>
+                        <option value="az">Name: A to Z</option>
+                        <option value="za">Name: Z to A</option>
+
+                    </select>
+
+                </div>
+
+
+                <div class="filter-bottom">
+
+                    <div class="filter-buttons">
+
+                        <button class="filter-btn active" onclick="quickCategory('all', this)">
+                            All
+                        </button>
+
+                        <button class="filter-btn" onclick="quickCategory('Kanchipuram Silk', this)">
+                            Silk
+                        </button>
+
+                        <button class="filter-btn" onclick="quickCategory('Banarasi Silk', this)">
+                            Banarasi
+                        </button>
+
+                        <button class="filter-btn" onclick="quickCategory('Cotton', this)">
+                            Cotton
+                        </button>
+
+                        <button class="filter-btn" onclick="quickCategory('Organza', this)">
+                            Organza
+                        </button>
+
+                        <button class="filter-btn" onclick="quickCategory('Linen', this)">
+                            Linen
+                        </button>
+
+                        <button class="filter-btn" onclick="quickCategory('Paithani', this)">
+                            Paithani
+                        </button>
+
+                    </div>
+
+
+                    <div class="result-count">
+
+                        Showing
+                        <strong id="resultCount">20</strong>
+                        of 100 sarees
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- =====================================================
+             PRODUCT GRID
+        ===================================================== -->
+
+            <div class="product-grid" id="productGrid"></div>
+
+
+            <!-- =====================================================
+             LOAD MORE
+        ===================================================== -->
+
+            <div class="load-area">
+
+                <button class="load-more" id="loadMoreBtn" onclick="loadMore()">
+
+                    LOAD MORE SAREES
+
+                    <i class="fa-solid fa-arrow-down" style="margin-left:8px;"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+     TRUST SECTION
+========================================================= -->
+
+    <section class="trust-section">
+
+        <div class="container">
+
+            <div class="trust-grid">
+
+                <div class="trust-card">
+
+                    <i class="fa-solid fa-truck-fast"></i>
+
+                    <h3>Free Shipping</h3>
+
+                    <p>
+                        Complimentary delivery on qualifying orders.
+                    </p>
+
+                </div>
+
+
+                <div class="trust-card">
+
+                    <i class="fa-solid fa-shield-heart"></i>
+
+                    <h3>Quality Assured</h3>
+
+                    <p>
+                        Carefully selected fabrics and authentic weaves.
+                    </p>
+
+                </div>
+
+
+                <div class="trust-card">
+
+                    <i class="fa-solid fa-box-open"></i>
+
+                    <h3>Elegant Packaging</h3>
+
+                    <p>
+                        Every saree arrives beautifully wrapped.
+                    </p>
+
+                </div>
+
+
+                <div class="trust-card">
+
+                    <i class="fa-solid fa-headset"></i>
+
+                    <h3>Personal Assistance</h3>
+
+                    <p>
+                        Our team is here to help you choose.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+     FOOTER
+========================================================= -->
+
+    <footer>
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div class="footer-brand">
+
+                    <h2>AVENZA </h2>
+
+                    <p>
+                        A contemporary textile destination celebrating
+                        India's timeless weaving traditions through
+                        carefully curated sarees.
+                    </p>
+
+                    <div class="socials">
+
+                        <a href="https://www.Instagram.com">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a href="https://www.Facebook.com">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+
+                        <a href="https://www.Pinterest.com">
+                            <i class="fa-brands fa-pinterest-p"></i>
+                        </a>
+
+                        <a href="https://www.WhatsApp.com">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h4>Shop</h4>
+
+                    <a href="#">Silk Sarees</a>
+                    <a href="#">Cotton Sarees</a>
+                    <a href="#">Banarasi Sarees</a>
+                    <a href="#">Party Wear</a>
+                    <a href="#">Wedding Collection</a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h4>Information</h4>
+
+                    <a href="about.html">About Us</a>
+                    <a href="checkout.html">Shipping Policy</a>
+                    <a href="#">Returns</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="contact.html">Contact Us</a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h4>Visit Us</h4>
+
+                    <p>
+                        24 Heritage Street,<br>
+                        Textile Market,<br>
+                        Chennai, Tamil Nadu
+                    </p>
+
+                    <p style="margin-top:12px;">
+                        +91 98765 43210
+                    </p>
+
+                    <p>
+                        hello@auratextiles.com
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="copyright">
+
+                © 2026 AVENZA TEXTILES.
+                Crafted with respect for Indian textile traditions.
+
+            </div>
+
+        </div>
+
+    </footer>
+
+
+    <style>
+        /* =========================================================
+           QUICK VIEW ACTION BUTTONS
+        ========================================================= */
+
+        .modal-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr 54px;
+            gap: 10px;
+            margin-top: 25px;
+            align-items: stretch;
+        }
+
+        .modal-buttons button {
+            min-height: 52px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-family: "DM Sans", sans-serif;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: .6px;
+            transition: .3s ease;
+        }
+
+        .modal-cart {
+            background: #211b18;
+            color: #fff;
+        }
+
+        .modal-cart:hover {
+            background: #9b6b3d;
+            transform: translateY(-2px);
+        }
+
+        .modal-buy-now {
+            background: #9b6b3d;
+            color: #fff;
+        }
+
+        .modal-buy-now:hover {
+            background: #211b18;
+            transform: translateY(-2px);
+        }
+
+        .modal-wishlist {
+            background: #f5f1eb;
+            color: #211b18;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px !important;
+        }
+
+        .modal-wishlist:hover {
+            background: #211b18;
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 600px) {
+            .modal-buttons {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .modal-wishlist {
+                grid-column: 1 / -1;
+            }
+        }
+    </style>
+
+    <!-- =========================================================
+     QUICK VIEW MODAL
+========================================================= -->
+
+    <div class="modal-overlay" id="modalOverlay">
+
+        <div class="quick-modal">
+
+            <button class="close-modal" onclick="closeModal()">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </button>
+
+
+            <div class="modal-image">
+
+                <img id="modalImage" src="" alt="Saree">
+
+            </div>
+
+
+            <div class="modal-content">
+
+                <div class="product-category" id="modalCategory">
+                </div>
+
+                <h2 id="modalName"></h2>
+
+                <div class="rating">
+                    ★★★★★
+                </div>
+
+                <div class="modal-price" id="modalPrice">
+                </div>
+
+                <p class="modal-description" id="modalDescription">
+                </p>
+
+                <div class="modal-buttons">
+
+                    <button class="modal-cart" onclick="addModalToCart()">
+                        <i class="fa-solid fa-bag-shopping"></i>
+                        &nbsp; ADD TO CART
+                    </button>
+
+                    <button class="modal-buy-now" onclick="buyNow()">
+                        <i class="fa-solid fa-bolt"></i>
+                        &nbsp; BUY NOW
+                    </button>
+
+                    <button class="modal-wishlist" onclick="addModalWishlist()" aria-label="Add to wishlist">
+                        <i class="fa-regular fa-heart"></i>
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================================================
+     TOAST
+========================================================= -->
+
+    <div class="toast" id="toast">
+        Added to your collection.
+    </div>
+
+
+    <script>
+
+        /* =========================================================
+           PRODUCT DATA — 100 SAREES
+        ========================================================= */
+
+        const products = [
+
+            {
+                id: 1,
+                name: "Royal Kanjivaram",
+                category: "Kanchipuram Silk",
+                price: 8499,
+                oldPrice: 9999,
+                color: "Ruby Red",
+                badge: "Bestseller",
+                image: "https://i.pinimg.com/736x/71/f3/0b/71f30be75d15ebdb5994d4b6542aacf4.jpg",
+                description: "Traditional Kanchipuram silk saree with rich zari detailing."
+            },
+
+            {
+                id: 2,
+                name: "Temple Gold Silk",
+                category: "Kanchipuram Silk",
+                price: 9299,
+                oldPrice: 10999,
+                color: "Golden Yellow",
+                badge: "Premium",
+                image: "https://i.pinimg.com/736x/17/54/ee/1754eeb5c2a70895a96bea4fc9c522f6.jpg",
+                description: "Elegant silk drape inspired by South Indian temple motifs."
+            },
+
+            {
+                id: 3,
+                name: "Emerald Heritage",
+                category: "Kanchipuram Silk",
+                price: 7999,
+                oldPrice: 8999,
+                color: "Emerald Green",
+                badge: "New",
+                image: "https://i.pinimg.com/1200x/3e/f1/e5/3ef1e57140cc80a87bbe60ad40093ae9.jpg",
+                description: "Deep emerald silk with a classic contrast border."
+            },
+
+            {
+                id: 4,
+                name: "Peacock Royale",
+                category: "Kanchipuram Silk",
+                price: 10499,
+                oldPrice: 11999,
+                color: "Peacock Blue",
+                badge: "Premium",
+                image: "https://i.pinimg.com/736x/d5/66/ff/d566ff6af683d4cfc557f183054aed80.jpg",
+                description: "Statement wedding saree with intricate peacock-inspired zari."
+            },
+
+            {
+                id: 5,
+                name: "Maroon Mahal",
+                category: "Kanchipuram Silk",
+                price: 8999,
+                oldPrice: 9999,
+                color: "Maroon",
+                badge: "Bestseller",
+                image: " https://i.pinimg.com/736x/1a/af/db/1aafdb3aefe064d1055e6c9c87b0f2ec.jpg",
+                description: "Classic maroon silk designed for grand celebrations."
+            },
+
+            {
+                id: 6,
+                name: "Lotus Pink Silk",
+                category: "Kanchipuram Silk",
+                price: 7799,
+                oldPrice: 8999,
+                color: "Lotus Pink",
+                badge: "New",
+                image: "https://i.pinimg.com/1200x/0b/57/d2/0b57d28554cb1ff5b5598f558a018c1c.jpg",
+                description: "Soft pink silk with delicate traditional motifs."
+            },
+
+            {
+                id: 7,
+                name: "Sunset Kanjivaram",
+                category: "Kanchipuram Silk",
+                price: 9699,
+                oldPrice: 10999,
+                color: "Orange",
+                badge: "Premium",
+                image: "https://i.pinimg.com/736x/11/b6/48/11b648a7b6c0b5ec98648cb2f75bf61f.jpg",
+                description: "Warm sunset tones with luxurious golden zari."
+            },
+
+            {
+                id: 8,
+                name: "Ivory Zari Silk",
+                category: "Kanchipuram Silk",
+                price: 8299,
+                oldPrice: 9499,
+                color: "Ivory",
+                badge: "Elegant",
+                image: "https://i.pinimg.com/736x/70/01/74/700174099fc55301bba89971a09d87de.jpg",
+                description: "Refined ivory silk with minimal zari sophistication."
+            },
+
+            {
+                id: 9,
+                name: "Royal Violet",
+                category: "Kanchipuram Silk",
+                price: 9999,
+                oldPrice: 11499,
+                color: "Violet",
+                badge: "Premium",
+                image: "https://i.pinimg.com/736x/d3/32/de/d332de9d1bfeb7d189e5ccdcb5b6bbc4.jpg",
+                description: "Regal violet Kanchipuram silk for special occasions."
+            },
+
+            {
+                id: 10,
+                name: "Coral Wedding Silk",
+                category: "Kanchipuram Silk",
+                price: 8799,
+                oldPrice: 9999,
+                color: "Coral",
+                badge: "Wedding",
+                image: "https://i.pinimg.com/736x/f6/c6/ec/f6c6ecd6fc7236e3f00f423225080083.jpg",
+                description: "Festive coral silk featuring a traditional broad border."
+            },
+
+
+            /* BANARASI */
+
+            {
+                id: 11,
+                name: "Banarasi Crimson",
+                category: "Banarasi Silk",
+                price: 6999,
+                oldPrice: 7999,
+                color: "Crimson",
+                badge: "Bestseller",
+                image: "https://i.pinimg.com/736x/d5/51/f0/d551f05602c1830a25a1993db710b6e6.jpg",
+                description: "Luxurious Banarasi silk with all-over woven motifs."
+            },
+
+            {
+                id: 12,
+                name: "Mughal Gold Banarasi",
+                category: "Banarasi Silk",
+                price: 7599,
+                oldPrice: 8999,
+                color: "Gold",
+                badge: "Premium",
+                image: "https://i.pinimg.com/1200x/95/b8/bc/95b8bc77102055476addda98fb875aba.jpg",
+                description: "Royal Banarasi design inspired by Mughal floral art."
+            },
+
+            {
+                id: 13,
+                name: "Midnight Banarasi",
+                category: "Banarasi Silk",
+                price: 7299,
+                oldPrice: 8499,
+                color: "Midnight Blue",
+                badge: "New",
+                image: "https://i.pinimg.com/1200x/f4/f7/84/f4f784151e5119df1b9be0017a18954d.jpg",
+                description: "Deep blue Banarasi silk with luminous zari weaving."
+            },
+
+            {
+                id: 14,
+                name: "Rose Gold Banarasi",
+                category: "Banarasi Silk",
+                price: 8199,
+                oldPrice: 9499,
+                color: "Rose",
+                badge: "Premium",
+                image: "https://i.pinimg.com/1200x/b7/74/a4/b774a4662b1c338e9ec9fbf1aca8d663.jpg",
+                description: "Feminine rose tones with a luxurious metallic finish."
+            },
+
+            {
+                id: 15,
+                name: "Antique Copper Banarasi",
+                category: "Banarasi Silk",
+                price: 6799,
+                oldPrice: 7799,
+                color: "Copper",
+                badge: "Classic",
+                image: "https://i.pinimg.com/1200x/5b/28/5f/5b285f34f95a91c74a4606d47c8e4b67.jpg",
+                description: "Vintage-inspired Banarasi with antique zari tones."
+            },
+
+            {
+                id: 16,
+                name: "Garden Green Banarasi",
+                category: "Banarasi Silk",
+                price: 7499,
+                oldPrice: 8499,
+                color: "Garden Green",
+                badge: "New",
+                image: "https://i.pinimg.com/1200x/01/47/af/0147af6b7bea0518e171927c3d1ecd16.jpg",
+                description: "Botanical motifs woven into a vibrant green silk base."
+            },
+
+            {
+                id: 17,
+                name: "Royal Plum Banarasi",
+                category: "Banarasi Silk",
+                price: 7899,
+                oldPrice: 8999,
+                color: "Plum",
+                badge: "Premium",
+                image: "https://i.pinimg.com/1200x/22/1b/ba/221bba45757247210e11cef8e9e03699.jpg",
+                description: "Deep plum silk with sophisticated floral zari work."
+            },
+
+            {
+                id: 18,
+                name: "Champagne Banarasi",
+                category: "Banarasi Silk",
+                price: 8299,
+                oldPrice: 9499,
+                color: "Champagne",
+                badge: "Elegant",
+                image: "https://i.pinimg.com/1200x/ea/04/97/ea04974d4e935149769435dc11127f6d.jpg",
+                description: "Soft champagne palette for elegant evening dressing."
+            },
+
+            {
+                id: 19,
+                name: "Royal Teal Banarasi",
+                category: "Banarasi Silk",
+                price: 7399,
+                oldPrice: 8499,
+                color: "Teal",
+                badge: "Bestseller",
+                image: "https://i.pinimg.com/1200x/c6/21/ad/c621ad65ccb54fe53637a9b822fb8da5.jpg",
+                description: "Rich teal Banarasi with traditional woven borders."
+            },
+
+            {
+                id: 20,
+                name: "Scarlet Floral Banarasi",
+                category: "Banarasi Silk",
+                price: 7999,
+                oldPrice: 9299,
+                color: "Scarlet",
+                badge: "Wedding",
+                image: "https://i.pinimg.com/1200x/a5/1b/33/a51b33b80cd4de28ccd252e6ffda8fbf.jpg",
+                description: "Scarlet silk adorned with delicate floral motifs."
+            },
+
+
+            /* COTTON */
+
+            {
+                id: 21,
+                name: "Classic White Cotton",
+                category: "Cotton",
+                price: 1299,
+                oldPrice: 1599,
+                color: "White",
+                badge: "Everyday",
+                image: "https://i.pinimg.com/1200x/20/d3/20/20d320b697ac09816b62e13597c4ac34.jpg",
+                description: "Breathable everyday cotton with a refined traditional finish."
+            },
+
+            {
+                id: 22,
+                name: "Indigo Handloom",
+                category: "Cotton",
+                price: 1599,
+                oldPrice: 1899,
+                color: "Indigo",
+                badge: "Handloom",
+                image: "https://i.pinimg.com/736x/e8/3c/d6/e83cd6cf1b25602435ca4af1750ab97b.jpg",
+                description: "Comfortable indigo handloom cotton for everyday elegance."
+            },
+
+            {
+                id: 23,
+                name: "Terracotta Cotton",
+                category: "Cotton",
+                price: 1399,
+                oldPrice: 1699,
+                color: "Terracotta",
+                badge: "New",
+                image: "https://i.pinimg.com/736x/b8/12/ec/b812ec90c7728d456064a464b4b5d4ae.jpg",
+                description: "Earthy terracotta cotton with a simple border."
+            },
+
+            {
+                id: 24,
+                name: "Mint Breeze Cotton",
+                category: "Cotton",
+                price: 1499,
+                oldPrice: 1799,
+                color: "Mint",
+                badge: "Fresh",
+                image: "https://i.pinimg.com/736x/64/f7/11/64f7110438ef1b1f1be8bb3bc9d9c7d3.jpg",
+                description: "Fresh mint cotton made for comfortable summer dressing."
+            },
+
+            {
+                id: 25,
+                name: "Mustard Handloom",
+                category: "Cotton",
+                price: 1699,
+                oldPrice: 1999,
+                color: "Mustard",
+                badge: "Handloom",
+                image: " https://i.pinimg.com/736x/15/24/06/15240650c2dde606bd3a2748b0ee0117.jpg",
+                description: "Warm mustard handloom with a graceful woven border."
+            },
+
+
+
+
+
+        ];
+
+
+        /* =========================================================
+           STATE
+        ========================================================= */
+
+        let filteredProducts = [...products];
+
+        let visibleCount = 20;
+
+        let wishlist = [];
+
+        let cart = [];
+
+        let currentModalProduct = null;
+
+
+        /* =========================================================
+           FORMAT PRICE
+        ========================================================= */
+
+        function formatPrice(price) {
+
+            return "₹" + price.toLocaleString("en-IN");
+
+        }
+
+
+        /* =========================================================
+           RENDER PRODUCTS
+        ========================================================= */
+
+        function renderProducts() {
+
+            const grid = document.getElementById("productGrid");
+
+            grid.innerHTML = "";
+
+            const visibleProducts =
+                filteredProducts.slice(0, visibleCount);
+
+
+            if (visibleProducts.length === 0) {
+
+                grid.innerHTML = `
+                <div style="
+                    grid-column:1/-1;
+                    text-align:center;
+                    padding:80px 20px;
+                    color:#7b7068;
+                ">
+                    <i class="fa-regular fa-face-frown"
+                       style="font-size:40px;margin-bottom:15px;">
+                    </i>
+
+                    <h3 style="
+                        font-family:'Cormorant Garamond',serif;
+                        font-size:30px;
+                        color:#2b1712;
+                        margin-bottom:8px;
+                    ">
+                        No sarees found
+                    </h3>
+
+                    <p>
+                        Try another search or category.
+                    </p>
+                </div>
+            `;
+
+                document.getElementById("loadMoreBtn").style.display = "none";
+
+                document.getElementById("resultCount").textContent = "0";
+
+                return;
+            }
+
+
+            visibleProducts.forEach(product => {
+
+                const card = document.createElement("article");
+
+                card.className = "product-card";
+
+
+                const isWishlisted =
+                    wishlist.includes(product.id);
+
+
+                card.innerHTML = `
+
+                <div class="product-image">
+
+                    <img
+                        src="${product.image}"
+                        alt="${product.name}"
+                        loading="lazy"
+                        onerror="this.src='https://images.unsplash.com/photo-1610030469983-98e550d6193c?auto=format&fit=crop&w=900&q=85'"
+                    >
+
+                    <span class="badge">
+                        ${product.badge}
+                    </span>
+
+
+                    <button
+                        class="wishlist ${isWishlisted ? "active" : ""}"
+                        onclick="toggleWishlist(${product.id}, event)"
+                        aria-label="Wishlist">
+
+                        <i class="${isWishlisted ? "fa-solid" : "fa-regular"} fa-heart"></i>
+
+                    </button>
+
+
+                    <button
+                        class="quick-view"
+                        onclick="openModal(${product.id})">
+
+                        <i class="fa-regular fa-eye"></i>
+                        &nbsp; QUICK VIEW
+
+                    </button>
+
+                </div>
+
+
+                <div class="product-info">
+
+                    <div class="product-category">
+                        ${product.category}
+                    </div>
+
+                    <h3 class="product-name">
+                        ${product.name}
+                    </h3>
+
+                    <p class="product-description">
+                        ${product.description}
+                    </p>
+
+
+                    <div class="rating">
+                        ★★★★★
+                    </div>
+
+
+                    <div class="price-row">
+
+                        <div>
+
+                            <span class="price">
+                                ${formatPrice(product.price)}
+                            </span>
+
+                            <span class="old-price">
+                                ${formatPrice(product.oldPrice)}
+                            </span>
+
+                        </div>
+
+
+                        <button
+                            class="add-cart"
+                            onclick="addToCart(${product.id})"
+                            aria-label="Add to cart">
+
+                            <i class="fa-solid fa-plus"></i>
+
+                        </button>
+
+                    </div>
+
+                </div>
+            `;
+
+
+                grid.appendChild(card);
+
+            });
+
+
+            document.getElementById("resultCount").textContent =
+                Math.min(visibleCount, filteredProducts.length);
+
+
+            const loadBtn =
+                document.getElementById("loadMoreBtn");
+
+
+            if (visibleCount >= filteredProducts.length) {
+
+                loadBtn.style.display = "none";
+
+            } else {
+
+                loadBtn.style.display = "inline-block";
+
+            }
+
+        }
+
+
+        /* =========================================================
+           SEARCH + FILTER
+        ========================================================= */
+
+        function filterProducts() {
+
+            const search =
+                document.getElementById("searchInput")
+                    .value
+                    .toLowerCase()
+                    .trim();
+
+
+            const category =
+                document.getElementById("categoryFilter").value;
+
+
+            const price =
+                document.getElementById("priceFilter").value;
+
+
+            filteredProducts =
+                products.filter(product => {
+
+
+                    const searchable =
+                        `${product.name}
+                     ${product.category}
+                     ${product.color}
+                     ${product.description}`
+                            .toLowerCase();
+
+
+                    const matchesSearch =
+                        searchable.includes(search);
+
+
+                    const matchesCategory =
+                        category === "all" ||
+                        product.category === category;
+
+
+                    let matchesPrice = true;
+
+
+                    if (price !== "all") {
+
+                        const [min, max] =
+                            price.split("-").map(Number);
+
+                        matchesPrice =
+                            product.price >= min &&
+                            product.price <= max;
+
+                    }
+
+
+                    return matchesSearch &&
+                        matchesCategory &&
+                        matchesPrice;
+
+                });
+
+
+            visibleCount = 20;
+
+            renderProducts();
+
+        }
+
+
+        /* =========================================================
+           QUICK CATEGORY
+        ========================================================= */
+
+        function quickCategory(category, button) {
+
+            document
+                .querySelectorAll(".filter-btn")
+                .forEach(btn =>
+                    btn.classList.remove("active")
+                );
+
+
+            button.classList.add("active");
+
+
+            document.getElementById("categoryFilter").value =
+                category;
+
+
+            filterProducts();
+
+        }
+
+
+        /* =========================================================
+           SORT
+        ========================================================= */
+
+        function sortProducts() {
+
+            const sort =
+                document.getElementById("sortFilter").value;
+
+
+            if (sort === "low") {
+
+                filteredProducts.sort(
+                    (a, b) => a.price - b.price
+                );
+
+            }
+
+
+            if (sort === "high") {
+
+                filteredProducts.sort(
+                    (a, b) => b.price - a.price
+                );
+
+            }
+
+
+            if (sort === "az") {
+
+                filteredProducts.sort(
+                    (a, b) =>
+                        a.name.localeCompare(b.name)
+                );
+
+            }
+
+
+            if (sort === "za") {
+
+                filteredProducts.sort(
+                    (a, b) =>
+                        b.name.localeCompare(a.name)
+                );
+
+            }
+
+
+            if (sort === "default") {
+
+                filteredProducts =
+                    products.filter(product =>
+                        filteredProducts.includes(product)
+                    );
+
+            }
+
+
+            visibleCount = 20;
+
+            renderProducts();
+
+        }
+
+
+        /* =========================================================
+           LOAD MORE
+        ========================================================= */
+
+        function loadMore() {
+
+            visibleCount += 20;
+
+            renderProducts();
+
+        }
+
+
+        /* =========================================================
+           WISHLIST
+        ========================================================= */
+
+        function toggleWishlist(id, event) {
+
+            if (event) {
+                event.stopPropagation();
+            }
+
+
+            if (wishlist.includes(id)) {
+
+                wishlist =
+                    wishlist.filter(item => item !== id);
+
+                showToast("Removed from wishlist.");
+
+            } else {
+
+                wishlist.push(id);
+
+                showToast("Added to wishlist.");
+
+            }
+
+
+            document.getElementById("wishlistCount")
+                .textContent = wishlist.length;
+
+
+            renderProducts();
+
+        }
+
+
+        function showWishlist() {
+
+            if (wishlist.length === 0) {
+
+                showToast("Your wishlist is empty.");
+
+                return;
+
+            }
+
+
+            showToast(
+                `${wishlist.length} saree${wishlist.length > 1 ? "s" : ""} in wishlist.`
+            );
+
+        }
+
+
+        /* =========================================================
+           CART
+        ========================================================= */
+
+        function addToCart(id) {
+
+            const product =
+                products.find(item => item.id === id);
+
+
+            if (!cart.includes(id)) {
+
+                cart.push(id);
+
+            }
+
+
+            document.getElementById("cartCount")
+                .textContent = cart.length;
+
+
+            showToast(
+                `${product.name} added to cart.`
+            );
+
+        }
+
+
+        function showCart() {
+
+            if (cart.length === 0) {
+
+                showToast("Your shopping bag is empty.");
+
+                return;
+
+            }
+
+
+            showToast(
+                `${cart.length} item${cart.length > 1 ? "s" : ""} in your shopping bag.`
+            );
+
+        }
+
+
+        /* =========================================================
+           QUICK VIEW
+        ========================================================= */
+
+        function openModal(id) {
+
+            const product =
+                products.find(item => item.id === id);
+
+
+            if (!product) return;
+
+
+            currentModalProduct = product;
+
+
+            document.getElementById("modalImage").src =
+                product.image;
+
+
+            document.getElementById("modalCategory")
+                .textContent = product.category;
+
+
+            document.getElementById("modalName")
+                .textContent = product.name;
+
+
+            document.getElementById("modalPrice")
+                .textContent = formatPrice(product.price);
+
+
+            document.getElementById("modalDescription")
+                .textContent = product.description;
+
+
+            document.getElementById("modalOverlay")
+                .classList.add("show");
+
+
+            document.body.style.overflow = "hidden";
+
+        }
+
+
+        function closeModal() {
+
+            document.getElementById("modalOverlay")
+                .classList.remove("show");
+
+
+            document.body.style.overflow = "";
+
+        }
+
+
+        function addModalToCart() {
+
+            if (!currentModalProduct) return;
+
+            addToCart(currentModalProduct.id);
+
+            closeModal();
+
+        }
+
+
+        /* =========================================================
+           BUY NOW — QUICK VIEW TO CHECKOUT
+        ========================================================= */
+
+        function buyNow() {
+
+            if (!currentModalProduct) return;
+
+            const product = currentModalProduct;
+
+            const checkoutProduct = {
+                id: product.id,
+                name: product.name,
+                category: product.category,
+                price: product.price,
+                oldPrice: product.oldPrice,
+                color: product.color,
+                image: product.image,
+                description: product.description,
+                quantity: 1
+            };
+
+            localStorage.setItem(
+                "checkoutProduct",
+                JSON.stringify(checkoutProduct)
+            );
+
+            closeModal();
+
+            window.location.href = "checkout.html";
+
+        }
+
+
+        function addModalWishlist() {
+
+            if (!currentModalProduct) return;
+
+
+            toggleWishlist(
+                currentModalProduct.id
+            );
+
+        }
+
+
+        /* =========================================================
+           TOAST
+        ========================================================= */
+
+        let toastTimer;
+
+
+        function showToast(message) {
+
+            const toast =
+                document.getElementById("toast");
+
+
+            toast.textContent = message;
+
+            toast.classList.add("show");
+
+
+            clearTimeout(toastTimer);
+
+
+            toastTimer =
+                setTimeout(() => {
+
+                    toast.classList.remove("show");
+
+                }, 2200);
+
+        }
+
+
+        /* =========================================================
+           MOBILE MENU
+        ========================================================= */
+
+        function toggleMenu() {
+
+            document
+                .getElementById("navLinks")
+                .classList.toggle("show");
+
+        }
+
+
+        /* =========================================================
+           CLOSE MODAL WHEN CLICKING OUTSIDE
+        ========================================================= */
+
+        document
+            .getElementById("modalOverlay")
+            .addEventListener("click", function (event) {
+
+                if (event.target === this) {
+
+                    closeModal();
+
+                }
+
+            });
+
+
+        /* =========================================================
+           ESC KEY
+        ========================================================= */
+
+        document.addEventListener("keydown", function (event) {
+
+            if (event.key === "Escape") {
+
+                closeModal();
+
+            }
+
+        });
+
+
+        /* =========================================================
+           INITIAL LOAD
+        ========================================================= */
+
+        renderProducts();
+
+    </script>
+    <script>
+
+
+        /* =========================================================
+           MOBILE NAVBAR
+        ========================================================= */
+
+        function toggleMenu() {
+
+            const menu =
+                document.getElementById("mobileNav");
+
+            const menuBtn =
+                document.getElementById("menuBtn");
+
+            const icon =
+                menuBtn.querySelector("i");
+
+
+            menu.classList.toggle("show");
+
+
+            const isOpen =
+                menu.classList.contains("show");
+
+
+            menuBtn.setAttribute(
+                "aria-expanded",
+                isOpen
+            );
+
+
+            if (isOpen) {
+
+                icon.classList.remove(
+                    "fa-bars"
+                );
+
+                icon.classList.add(
+                    "fa-xmark"
+                );
+
+                menuBtn.setAttribute(
+                    "aria-label",
+                    "Close menu"
+                );
+
+            } else {
+
+                icon.classList.remove(
+                    "fa-xmark"
+                );
+
+                icon.classList.add(
+                    "fa-bars"
+                );
+
+                menuBtn.setAttribute(
+                    "aria-label",
+                    "Open menu"
+                );
+
+            }
+
+        }
+
+
+        /* =========================================================
+           CLOSE MOBILE MENU AFTER LINK CLICK
+        ========================================================= */
+
+        document
+            .querySelectorAll("#mobileNav a")
+            .forEach(function (link) {
+
+                link.addEventListener(
+                    "click",
+                    function () {
+
+                        closeMobileMenu();
+
+                    }
+                );
+
+            });
+
+
+        /* =========================================================
+           CLOSE MOBILE MENU
+        ========================================================= */
+
+        function closeMobileMenu() {
+
+            const menu =
+                document.getElementById("mobileNav");
+
+            const menuBtn =
+                document.getElementById("menuBtn");
+
+            const icon =
+                menuBtn.querySelector("i");
+
+
+            menu.classList.remove("show");
+
+
+            menuBtn.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+
+            menuBtn.setAttribute(
+                "aria-label",
+                "Open menu"
+            );
+
+
+            icon.classList.remove(
+                "fa-xmark"
+            );
+
+            icon.classList.add(
+                "fa-bars"
+            );
+
+        }
+
+
+        /* =========================================================
+           CLICK OUTSIDE MOBILE MENU
+        ========================================================= */
+
+        document.addEventListener(
+            "click",
+            function (event) {
+
+                const menu =
+                    document.getElementById("mobileNav");
+
+                const menuBtn =
+                    document.getElementById("menuBtn");
+
+
+                if (!menu || !menuBtn) {
+                    return;
+                }
+
+
+                if (
+                    menu.classList.contains("show") &&
+                    !menu.contains(event.target) &&
+                    !menuBtn.contains(event.target)
+                ) {
+
+                    closeMobileMenu();
+
+                }
+
+            }
+        );
+
+
+        /* =========================================================
+           CLOSE MENU ON DESKTOP
+        ========================================================= */
+
+        window.addEventListener(
+            "resize",
+            function () {
+
+                if (window.innerWidth > 780) {
+
+                    closeMobileMenu();
+
+                }
+
+            }
+        );
+
+
+        /* =========================================================
+           QUICK VIEW
+        ========================================================= */
+
+        function openQuickView(
+            image,
+            name,
+            category,
+            price,
+            description
+        ) {
+
+
+            const modal =
+                document.getElementById(
+                    "quickViewModal"
+                );
+
+
+            document.getElementById(
+                "quickViewImage"
+            ).src = image;
+
+
+            document.getElementById(
+                "quickViewImage"
+            ).alt = name;
+
+
+            document.getElementById(
+                "quickViewName"
+            ).textContent = name;
+
+
+            document.getElementById(
+                "quickViewCategory"
+            ).textContent = category;
+
+
+            document.getElementById(
+                "quickViewPrice"
+            ).textContent = price;
+
+
+            document.getElementById(
+                "quickViewDescription"
+            ).textContent = description;
+
+
+            modal.classList.add("show");
+
+
+            document.body.style.overflow =
+                "hidden";
+
+        }
+
+
+        /* =========================================================
+           CLOSE QUICK VIEW
+        ========================================================= */
+
+        function closeQuickView() {
+
+            const modal =
+                document.getElementById(
+                    "quickViewModal"
+                );
+
+
+            modal.classList.remove("show");
+
+
+            document.body.style.overflow =
+                "";
+
+        }
+
+
+        /* =========================================================
+           CLICK OUTSIDE QUICK VIEW
+        ========================================================= */
+
+        document
+            .getElementById("quickViewModal")
+            .addEventListener(
+                "click",
+                function (event) {
+
+                    if (
+                        event.target === this
+                    ) {
+
+                        closeQuickView();
+
+                    }
+
+                }
+            );
+
+
+        /* =========================================================
+           ESCAPE KEY
+        ========================================================= */
+
+        document.addEventListener(
+            "keydown",
+            function (event) {
+
+                if (
+                    event.key === "Escape"
+                ) {
+
+                    closeQuickView();
+
+                }
+
+            }
+        );
+
+
+        /* =========================================================
+           QUICK VIEW CART
+        ========================================================= */
+
+        function quickViewAddToCart() {
+
+            showToast(
+                "Product added to cart"
+            );
+
+        }
+
+
+        /* =========================================================
+           QUICK VIEW WISHLIST
+        ========================================================= */
+
+        function quickViewWishlist() {
+
+            showToast(
+                "Added to wishlist"
+            );
+
+        }
+
+
+        /* =========================================================
+           WISHLIST BUTTON
+        ========================================================= */
+
+        function toggleWishlist(button) {
+
+            button.classList.toggle(
+                "active"
+            );
+
+
+            const icon =
+                button.querySelector("i");
+
+
+            if (
+                button.classList.contains(
+                    "active"
+                )
+            ) {
+
+                icon.classList.remove(
+                    "fa-regular"
+                );
+
+                icon.classList.add(
+                    "fa-solid"
+                );
+
+                showToast(
+                    "Added to wishlist"
+                );
+
+            } else {
+
+                icon.classList.remove(
+                    "fa-solid"
+                );
+
+                icon.classList.add(
+                    "fa-regular"
+                );
+
+                showToast(
+                    "Removed from wishlist"
+                );
+
+            }
+
+        }
+
+
+        /* =========================================================
+           TOAST
+        ========================================================= */
+
+        function showToast(message) {
+
+            const toast =
+                document.getElementById(
+                    "toast"
+                );
+
+
+            toast.textContent =
+                message;
+
+
+            toast.classList.add(
+                "show"
+            );
+
+
+            setTimeout(
+                function () {
+
+                    toast.classList.remove(
+                        "show"
+                    );
+
+                },
+                2200
+            );
+
+        }
+
+
+        /* =========================================================
+           OWL CAROUSEL
+        ========================================================= */
+
+        $(document).ready(function () {
+
+
+            /* NEW ARRIVALS */
+
+            $(".new-arrivals-carousel").owlCarousel({
+
+                loop: true,
+
+                margin: 18,
+
+                nav: true,
+
+                dots: true,
+
+                autoplay: true,
+
+                autoplayTimeout: 4500,
+
+                autoplayHoverPause: true,
+
+                responsive: {
+
+                    0: {
+                        items: 1
+                    },
+
+                    576: {
+                        items: 2
+                    },
+
+                    992: {
+                        items: 3
+                    },
+
+                    1200: {
+                        items: 4
+                    }
+
+                }
+
+            });
+
+
+            /* BEST SELLING */
+
+            $(".best-selling-carousel").owlCarousel({
+
+                loop: true,
+
+                margin: 18,
+
+                nav: true,
+
+                dots: true,
+
+                autoplay: true,
+
+                autoplayTimeout: 4500,
+
+                autoplayHoverPause: true,
+
+                responsive: {
+
+                    0: {
+                        items: 1
+                    },
+
+                    576: {
+                        items: 2
+                    },
+
+                    992: {
+                        items: 3
+                    },
+
+                    1200: {
+                        items: 4
+                    }
+
+                }
+
+            });
+
+
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,3157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVENZA TEXTILES | </title>
+    <meta name="description"
+        content="Explore our exclusive collection of premium sarees including Kanchipuram Silk, Banarasi, Organza, Cotton, Linen, Chanderi and more.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="about.css">
+    <link rel="stylesheet" href="checkout.css">
+    
+</head>
+
+<body>
+
+
+    <!-- =========================================================
+     TOP BAR
+========================================================= -->
+
+    <div class="top-bar">
+        ✦ FREE SHIPPING ON ORDERS ABOVE ₹1,999 &nbsp; • &nbsp; HANDPICKED SAREES FOR EVERY OCCASION ✦
+    </div>
+
+
+    <!-- =========================================================
+     NAVBAR
+========================================================= -->
+
+    <header class="navbar">
+
+        <div class="nav-inner container">
+
+
+            <!-- BRAND -->
+
+            <a href="index.html" class="brand">
+
+                <div class="brand-mark">
+                    A
+                </div>
+
+                <div class="brand-text">
+
+                    <strong>
+                        AVENZA
+                    </strong>
+
+                    <span>
+                        TEXTILES
+                    </span>
+
+                </div>
+
+            </a>
+
+
+            <!-- NAVIGATION -->
+
+            <nav class="nav-links" id="mobileNav">
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="#new-arrivals">
+                    New Arrivals
+                </a>
+
+                <a href="#best-selling">
+                    Best Selling
+                </a>
+
+                <a href="catelog.html">
+                    Collections
+                </a>
+
+                <a href="about.html">
+                    About Us
+                </a>
+
+                <a href="contact.html">
+                    Contact
+                </a>
+
+            </nav>
+
+
+            <!-- RIGHT SIDE -->
+
+            <div class="nav-icons">
+
+
+                 <!-- ACCOUNT -->
+
+                <a href="#" class="nav-icon" aria-label="Account" onclick="openAccount(event)">
+
+                    <i class="fa-regular fa-user"></i>
+
+                </a>
+                
+
+                <div class="account-overlay" id="accountOverlay">
+
+                    <div class="account-modal">
+
+                        <!-- CLOSE BUTTON -->
+                        <button class="account-close" onclick="closeAccount()" aria-label="Close Account">
+
+                            <i class="fa-solid fa-xmark"></i>
+
+                        </button>
+
+
+                        <!-- ACCOUNT ICON -->
+                        <div class="account-icon">
+
+                            <i class="fa-regular fa-user"></i>
+
+                        </div>
+
+
+                        <!-- CONTENT -->
+                        <div class="account-content">
+
+                            <span class="account-label">
+                                WELCOME BACK
+                            </span>
+
+                            <h2>
+                                My Account
+                            </h2>
+
+                            <p>
+                                Sign in to manage your orders,
+                                wishlist and personal details.
+                            </p>
+
+
+                            <!-- LOGIN -->
+                            <a href="#" class="account-btn account-login">
+
+                                <i class="fa-solid fa-arrow-right-to-bracket"></i>
+
+                                Sign In
+
+                            </a>
+
+
+                            <!-- REGISTER -->
+                            <a href="#" class="account-btn account-register">
+
+                                Create an Account
+
+                            </a>
+
+
+                            <!-- EXTRA LINKS -->
+                            <div class="account-links">
+
+                                <a href="#">
+                                    <i class="fa-solid fa-box"></i>
+                                    My Orders
+                                </a>
+
+                                <a href="#">
+                                    <i class="fa-regular fa-heart"></i>
+                                    Wishlist
+                                </a>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <style>
+
+                    .account-overlay {
+                        position: fixed;
+
+                        inset: 0;
+
+                        width: 100%;
+                        height: 100dvh;
+
+                        background: rgba(20, 16, 13, 0.72);
+
+                        backdrop-filter: blur(10px);
+                        -webkit-backdrop-filter: blur(10px);
+
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        padding: 20px;
+
+                        opacity: 0;
+                        visibility: hidden;
+                        pointer-events: none;
+
+                        transition:
+                            opacity .35s ease,
+                            visibility .35s ease;
+
+                        z-index: 99999;
+                    }
+
+
+                    /* OPEN */
+
+                    .account-overlay.active {
+                        opacity: 1;
+
+                        visibility: visible;
+
+                        pointer-events: auto;
+                    }
+
+
+
+                    .account-modal {
+                        position: relative;
+
+                        width: 100%;
+                        max-width: 430px;
+
+                        background: #ffffff;
+
+                        padding: 45px 40px 40px;
+
+                        border-radius: 20px;
+
+                        text-align: center;
+
+                        box-shadow:
+                            0 30px 80px rgba(0, 0, 0, .30);
+
+                        transform: translateY(35px) scale(.96);
+
+                        transition: transform .35s ease;
+                    }
+
+                    .account-overlay.active .account-modal {
+                        transform: translateY(0) scale(1);
+                    }
+
+
+
+                    .account-close {
+                        position: absolute;
+
+                        top: 15px;
+                        right: 15px;
+
+                        width: 40px;
+                        height: 40px;
+
+                        border: none;
+
+                        border-radius: 50%;
+
+                        background: #f4f1ed;
+
+                        color: #211b18;
+
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        cursor: pointer;
+
+                        font-size: 17px;
+
+                        transition: .3s ease;
+                    }
+
+                    .account-close:hover {
+                        background: #211b18;
+
+                        color: #ffffff;
+
+                        transform: rotate(90deg);
+                    }
+
+
+                    
+
+                    .account-icon {
+                        width: 68px;
+                        height: 68px;
+
+                        margin: 0 auto 20px;
+
+                        border-radius: 50%;
+
+                        background: #f5f1eb;
+
+                        color: #9b6b3d;
+
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        font-size: 25px;
+                    }
+
+
+
+                    .account-label {
+                        display: block;
+
+                        margin-bottom: 10px;
+
+                        color: #9b6b3d;
+
+                        font-size: 11px;
+
+                        font-weight: 600;
+
+                        letter-spacing: 3px;
+                    }
+
+                    .account-content h2 {
+                        margin: 0 0 10px;
+
+                        color: #211b18;
+
+                        font-size: 32px;
+
+                        font-weight: 500;
+                    }
+
+                    .account-content p {
+                        margin: 0 auto 28px;
+
+                        max-width: 330px;
+
+                        color: #777;
+
+                        font-size: 14px;
+
+                        line-height: 1.7;
+                    }
+
+
+
+                    .account-btn {
+                        width: 100%;
+
+                        min-height: 52px;
+
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        gap: 10px;
+
+                        margin-bottom: 12px;
+
+                        border-radius: 8px;
+
+                        text-decoration: none;
+
+                        font-size: 14px;
+
+                        transition: .3s ease;
+                    }
+
+
+                    /* LOGIN */
+
+                    .account-login {
+                        background: #211b18;
+
+                        color: #ffffff;
+                    }
+
+                    .account-login:hover {
+                        background: #9b6b3d;
+
+                        color: #ffffff;
+
+                        transform: translateY(-2px);
+                    }
+
+
+                    /* REGISTER */
+
+                    .account-register {
+                        border: 1px solid #dcd7d1;
+
+                        background: #ffffff;
+
+                        color: #211b18;
+                    }
+
+                    .account-register:hover {
+                        background: #f5f1eb;
+
+                        border-color: #211b18;
+
+                        color: #211b18;
+                    }
+
+
+                    
+
+                    .account-links {
+                        display: flex;
+
+                        justify-content: center;
+
+                        gap: 25px;
+
+                        margin-top: 25px;
+
+                        padding-top: 20px;
+
+                        border-top: 1px solid #eeeeee;
+                    }
+
+                    .account-links a {
+                        display: flex;
+
+                        align-items: center;
+
+                        gap: 7px;
+
+                        color: #666;
+
+                        text-decoration: none;
+
+                        font-size: 12px;
+
+                        transition: .3s ease;
+                    }
+
+                    .account-links a:hover {
+                        color: #9b6b3d;
+                    }
+
+
+                    
+
+                    @media (max-width: 600px) {
+
+                        .account-overlay {
+                            padding: 15px;
+                        }
+
+                        .account-modal {
+                            max-width: 100%;
+
+                            padding: 42px 22px 25px;
+
+                            border-radius: 16px;
+                        }
+
+                        .account-icon {
+                            width: 60px;
+                            height: 60px;
+
+                            font-size: 22px;
+                        }
+
+                        .account-content h2 {
+                            font-size: 28px;
+                        }
+
+                        .account-content p {
+                            font-size: 13px;
+                        }
+
+                        .account-links {
+                            gap: 18px;
+                        }
+
+                    }
+                </style>
+                <script>
+
+                    const accountOverlay =
+                        document.getElementById("accountOverlay");
+
+
+                    /* OPEN ACCOUNT */
+
+                    function openAccount(event) {
+
+                        event.preventDefault();
+
+                        accountOverlay.classList.add("active");
+
+                        document.body.style.overflow = "hidden";
+                    }
+
+
+                    /* CLOSE ACCOUNT */
+
+                    function closeAccount() {
+
+                        accountOverlay.classList.remove("active");
+
+                        document.body.style.overflow = "";
+                    }
+
+
+                    /* CLICK OUTSIDE */
+
+                    accountOverlay.addEventListener("click", function (event) {
+
+                        if (event.target === accountOverlay) {
+
+                            closeAccount();
+
+                        }
+
+                    });
+
+
+                    /* ESC KEY */
+
+                    document.addEventListener("keydown", function (event) {
+
+                        if (
+                            event.key === "Escape" &&
+                            accountOverlay.classList.contains("active")
+                        ) {
+
+                            closeAccount();
+
+                        }
+
+                    });
+
+                </script>
+
+
+
+                <!-- CART -->
+ <!-- CART -->
+                <a href="#" class="nav-icon" aria-label="Cart" onclick="openCart(event)">
+
+                    <i class="fa-solid fa-bag-shopping"></i>
+
+                    <span class="count">
+                        2
+                    </span>
+
+                </a>
+  
+                <div class="cart-overlay" id="cartOverlay">
+
+                    <div class="cart-modal">
+
+                        <!-- CART HEADER -->
+                        <div class="cart-header">
+
+                            <div>
+                                <span class="cart-label">
+                                    YOUR SHOPPING BAG
+                                </span>
+
+                                <h2>
+                                    My Cart
+                                </h2>
+                            </div>
+
+                            <button class="cart-close" onclick="closeCart()" aria-label="Close Cart">
+
+                                <i class="fa-solid fa-xmark"></i>
+
+                            </button>
+
+                        </div>
+
+
+                        <!-- CART ITEMS -->
+                        <div class="cart-items">
+
+
+                            <!-- ITEM 1 -->
+                            <div class="cart-item">
+
+                                <div class="cart-product-image">
+
+                                  <img src="https://i.pinimg.com/1200x/6b/bf/99/6bbf99965fc7a1f6ef852238a1d65d96.jpg"
+                            alt="Kanchipuram Wedding Silk Saree">
+
+                                </div>
+
+
+                                <div class="cart-product-info">
+
+                                    <h3>
+                                        Premium Silk Saree
+                                    </h3>
+
+                                    <p>
+                                        Traditional Collection
+                                    </p>
+
+                                    <div class="cart-bottom">
+
+                                        <div class="quantity">
+
+                                            <button onclick="changeQuantity(this, -1)">
+                                                −
+                                            </button>
+
+                                            <span>
+                                                1
+                                            </span>
+
+                                            <button onclick="changeQuantity(this, 1)">
+                                                +
+                                            </button>
+
+                                        </div>
+
+                                        <strong>
+                                            ₹5,499
+                                        </strong>
+
+                                    </div>
+
+                                </div>
+
+
+                                <button class="remove-item" onclick="removeCartItem(this)" aria-label="Remove item">
+
+                                    <i class="fa-solid fa-trash"></i>
+
+                                </button>
+
+                            </div>
+
+
+                            <!-- ITEM 2 -->
+                            <div class="cart-item">
+
+                                <div class="cart-product-image">
+
+                                <img src="https://i.pinimg.com/1200x/70/55/1f/70551f3761d82cb2456e34be579389fb.jpg"
+                            alt="Royal Kanchipuram Silk Saree">
+
+                                </div>
+
+
+                                <div class="cart-product-info">
+
+                                    <h3>
+                                        Kanchipuram Silk Saree
+                                    </h3>
+
+                                    <p>
+                                        Wedding Collection
+                                    </p>
+
+                                    <div class="cart-bottom">
+
+                                        <div class="quantity">
+
+                                            <button onclick="changeQuantity(this, -1)">
+                                                −
+                                            </button>
+
+                                            <span>
+                                                1
+                                            </span>
+
+                                            <button onclick="changeQuantity(this, 1)">
+                                                +
+                                            </button>
+
+                                        </div>
+
+                                        <strong>
+                                            ₹4,999
+                                        </strong>
+
+                                    </div>
+
+                                </div>
+
+
+                                <button class="remove-item" onclick="removeCartItem(this)" aria-label="Remove item">
+
+                                    <i class="fa-solid fa-trash"></i>
+
+                                </button>
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- CART FOOTER -->
+                        <div class="cart-footer">
+
+                            <div class="cart-summary">
+
+                                <span>
+                                    Subtotal
+                                </span>
+
+                                <strong id="cartTotal">
+                                    ₹10,498
+                                </strong>
+
+                            </div>
+
+                            <p class="shipping-note">
+                                Shipping and taxes calculated at checkout.
+                            </p>
+
+
+                            <a href="buynow.html" class="checkout-btn">
+
+                                Proceed to Checkout
+
+                                <i class="fa-solid fa-arrow-right"></i>
+
+                            </a>
+
+
+                            <a href="#" class="view-cart-btn">
+
+                                View Full Cart
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <style>
+                    
+
+                    .cart-overlay {
+                        position: fixed;
+                        inset: 0;
+
+                        width: 100%;
+                        height: 100dvh;
+
+                        background: rgba(20, 16, 13, 0.68);
+
+                        backdrop-filter: blur(8px);
+                        -webkit-backdrop-filter: blur(8px);
+
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        padding: 20px;
+
+                        opacity: 0;
+                        visibility: hidden;
+                        pointer-events: none;
+
+                        transition:
+                            opacity .35s ease,
+                            visibility .35s ease;
+
+                        z-index: 99999;
+                    }
+
+                    .cart-overlay.active {
+                        opacity: 1;
+                        visibility: visible;
+                        pointer-events: auto;
+                    }
+
+
+                    
+
+                    .cart-modal {
+                        width: 100%;
+                        max-width: 650px;
+                        max-height: 90vh;
+
+                        background: #ffffff;
+
+                        border-radius: 20px;
+
+                        overflow: hidden;
+
+                        box-shadow:
+                            0 30px 80px rgba(0, 0, 0, .30);
+
+                        transform: translateY(35px) scale(.96);
+
+                        transition: transform .35s ease;
+
+                        display: flex;
+                        flex-direction: column;
+                    }
+
+                    .cart-overlay.active .cart-modal {
+                        transform: translateY(0) scale(1);
+                    }
+
+
+                    
+
+                    .cart-header {
+                        display: flex;
+
+                        align-items: center;
+                        justify-content: space-between;
+
+                        padding: 28px 30px 22px;
+
+                        border-bottom: 1px solid #eeeeee;
+                    }
+
+                    .cart-label {
+                        display: block;
+
+                        margin-bottom: 7px;
+
+                        color: #9b6b3d;
+
+                        font-size: 10px;
+
+                        letter-spacing: 2.5px;
+
+                        font-weight: 600;
+                    }
+
+                    .cart-header h2 {
+                        margin: 0;
+
+                        color: #211b18;
+
+                        font-size: 30px;
+
+                        font-weight: 500;
+                    }
+
+
+                
+
+                    .cart-close {
+                        width: 40px;
+                        height: 40px;
+
+                        border: none;
+
+                        border-radius: 50%;
+
+                        background: #f4f1ed;
+
+                        color: #211b18;
+
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        cursor: pointer;
+
+                        font-size: 17px;
+
+                        transition: .3s ease;
+                    }
+
+                    .cart-close:hover {
+                        background: #211b18;
+
+                        color: #ffffff;
+
+                        transform: rotate(90deg);
+                    }
+
+
+                
+
+                    .cart-items {
+                        padding: 10px 30px;
+
+                        overflow-y: auto;
+
+                        flex: 1;
+                    }
+
+                    .cart-item {
+                        position: relative;
+
+                        display: flex;
+
+                        gap: 16px;
+
+                        padding: 18px 0;
+
+                        border-bottom: 1px solid #eeeeee;
+                    }
+
+                    .cart-product-image {
+                        width: 95px;
+                        height: 115px;
+
+                        flex-shrink: 0;
+
+                        overflow: hidden;
+
+                        border-radius: 8px;
+
+                        background: #f5f2ee;
+                    }
+
+                    .cart-product-image img {
+                        width: 100%;
+                        height: 100%;
+
+                        display: block;
+
+                        object-fit: cover;
+                    }
+
+
+                    
+
+                    .cart-product-info {
+                        flex: 1;
+
+                        padding-right: 25px;
+                    }
+
+                    .cart-product-info h3 {
+                        margin: 2px 0 6px;
+
+                        color: #211b18;
+
+                        font-size: 15px;
+
+                        font-weight: 600;
+                    }
+
+                    .cart-product-info p {
+                        margin: 0 0 15px;
+
+                        color: #888;
+
+                        font-size: 12px;
+                    }
+
+
+
+                    .cart-bottom {
+                        display: flex;
+
+                        align-items: center;
+                        justify-content: space-between;
+                    }
+
+                    .cart-bottom strong {
+                        color: #211b18;
+
+                        font-size: 15px;
+                    }
+
+
+                    
+
+                    .quantity {
+                        display: flex;
+
+                        align-items: center;
+
+                        border: 1px solid #ddd;
+
+                        border-radius: 5px;
+
+                        overflow: hidden;
+                    }
+
+                    .quantity button {
+                        width: 30px;
+                        height: 28px;
+
+                        border: none;
+
+                        background: #ffffff;
+
+                        color: #211b18;
+
+                        cursor: pointer;
+
+                        font-size: 15px;
+                    }
+
+                    .quantity button:hover {
+                        background: #f5f2ee;
+                    }
+
+                    .quantity span {
+                        min-width: 30px;
+
+                        text-align: center;
+
+                        font-size: 12px;
+                    }
+
+
+                  
+
+                    .remove-item {
+                        position: absolute;
+
+                        top: 18px;
+                        right: 0;
+
+                        border: none;
+
+                        background: transparent;
+
+                        color: #aaa;
+
+                        cursor: pointer;
+
+                        font-size: 12px;
+
+                        transition: .3s ease;
+                    }
+
+                    .remove-item:hover {
+                        color: #b44b3b;
+                    }
+
+
+                    
+
+                    .cart-footer {
+                        padding: 22px 30px 28px;
+
+                        background: #faf8f4;
+
+                        border-top: 1px solid #eeeeee;
+                    }
+
+                    .cart-summary {
+                        display: flex;
+
+                        align-items: center;
+                        justify-content: space-between;
+
+                        color: #211b18;
+
+                        font-size: 15px;
+                    }
+
+                    .cart-summary strong {
+                        font-size: 20px;
+                    }
+
+                    .shipping-note {
+                        margin: 7px 0 18px;
+
+                        color: #888;
+
+                        font-size: 11px;
+                    }
+
+
+                    .checkout-btn {
+                        width: 100%;
+                        height: 52px;
+
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        gap: 10px;
+
+                        border-radius: 7px;
+
+                        background: #211b18;
+
+                        color: #ffffff;
+
+                        text-decoration: none;
+
+                        font-size: 13px;
+
+                        transition: .3s ease;
+                    }
+
+                    .checkout-btn:hover {
+                        background: #9b6b3d;
+
+                        color: #ffffff;
+
+                        transform: translateY(-2px);
+                    }
+
+
+                    
+
+                    .view-cart-btn {
+                        display: block;
+
+                        margin-top: 13px;
+
+                        text-align: center;
+
+                        color: #211b18;
+
+                        text-decoration: none;
+
+                        font-size: 12px;
+
+                        transition: .3s ease;
+                    }
+
+                    .view-cart-btn:hover {
+                        color: #9b6b3d;
+                    }
+
+
+                
+
+                    @media (max-width: 600px) {
+
+                        .cart-overlay {
+                            padding: 12px;
+                        }
+
+                        .cart-modal {
+                            max-height: 94vh;
+
+                            border-radius: 16px;
+                        }
+
+                        .cart-header {
+                            padding: 22px 20px 18px;
+                        }
+
+                        .cart-header h2 {
+                            font-size: 25px;
+                        }
+
+                        .cart-items {
+                            padding: 5px 20px;
+                        }
+
+                        .cart-item {
+                            gap: 12px;
+                        }
+
+                        .cart-product-image {
+                            width: 75px;
+                            height: 95px;
+                        }
+
+                        .cart-product-info h3 {
+                            font-size: 13px;
+                        }
+
+                        .cart-product-info p {
+                            font-size: 11px;
+                            margin-bottom: 10px;
+                        }
+
+                        .cart-footer {
+                            padding: 18px 20px 22px;
+                        }
+
+                    }
+                </style>
+                <script>
+
+                    const cartOverlay =
+                        document.getElementById("cartOverlay");
+
+
+                    /* OPEN CART */
+
+                    function openCart(event) {
+
+                        event.preventDefault();
+
+                        cartOverlay.classList.add("active");
+
+                        document.body.style.overflow = "hidden";
+                    }
+
+
+                    /* CLOSE CART */
+
+                    function closeCart() {
+
+                        cartOverlay.classList.remove("active");
+
+                        document.body.style.overflow = "";
+                    }
+
+
+                    /* CLICK OUTSIDE */
+
+                    cartOverlay.addEventListener("click", function (event) {
+
+                        if (event.target === cartOverlay) {
+
+                            closeCart();
+
+                        }
+
+                    });
+
+
+                    /* ESC KEY */
+
+                    document.addEventListener("keydown", function (event) {
+
+                        if (
+                            event.key === "Escape" &&
+                            cartOverlay.classList.contains("active")
+                        ) {
+
+                            closeCart();
+
+                        }
+
+                    });
+
+
+                    /* QUANTITY */
+
+                    function changeQuantity(button, amount) {
+
+                        const quantityBox =
+                            button.parentElement;
+
+                        const quantityText =
+                            quantityBox.querySelector("span");
+
+                        let quantity =
+                            parseInt(quantityText.textContent);
+
+                        quantity += amount;
+
+                        if (quantity < 1) {
+                            quantity = 1;
+                        }
+
+                        quantityText.textContent = quantity;
+                    }
+
+
+                    /* REMOVE ITEM */
+
+                    function removeCartItem(button) {
+
+                        const item =
+                            button.closest(".cart-item");
+
+                        item.remove();
+
+                        updateCartCount();
+
+                    }
+
+
+                    /* UPDATE BADGE */
+
+                    function updateCartCount() {
+
+                        const items =
+                            document.querySelectorAll(".cart-item");
+
+                        const count =
+                            document.querySelector(".nav-icon .count");
+
+                        if (count) {
+
+                            count.textContent = items.length;
+
+                        }
+
+                    }
+
+                </script>
+
+
+
+                <!-- MOBILE MENU -->
+
+                <button class="menu-btn" id="menuBtn" onclick="toggleMenu()" aria-label="Open menu"
+                    aria-expanded="false">
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+    <!-- =========================================================
+     HERO
+========================================================= -->
+
+
+
+  
+    <!-- =========================================
+         CHECKOUT PAGE
+    ========================================= -->
+
+    <main class="checkout-page">
+
+
+        <!-- TOP -->
+
+        <section class="checkout-top">
+
+            <span class="checkout-label">
+                Complete Your Purchase
+            </span>
+
+            <h1 class="checkout-title">
+                Checkout
+            </h1>
+
+            <p class="checkout-subtitle">
+                Review your items, enter your details,
+                and complete your order securely.
+            </p>
+
+
+            <!-- PROGRESS -->
+
+            <div class="checkout-progress">
+
+                <div class="progress-step active">
+
+                    <span class="progress-number">
+                        1
+                    </span>
+
+                    <span>
+                        Information
+                    </span>
+
+                </div>
+
+
+                <div class="progress-line"></div>
+
+
+                <div class="progress-step active">
+
+                    <span class="progress-number">
+                        2
+                    </span>
+
+                    <span>
+                        Delivery
+                    </span>
+
+                </div>
+
+
+                <div class="progress-line"></div>
+
+
+                <div class="progress-step active">
+
+                    <span class="progress-number">
+                        3
+                    </span>
+
+                    <span>
+                        Payment
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             GRID
+        ====================================== -->
+
+        <div class="checkout-grid">
+
+
+            <!-- =================================
+                 LEFT COLUMN
+            ================================== -->
+
+            <div class="checkout-main">
+
+
+                <!-- CUSTOMER INFORMATION -->
+
+                <section class="checkout-card">
+
+                    <div class="card-heading">
+
+                        <div class="card-heading-left">
+
+                            <div class="heading-icon">
+
+                                <i class="fa-regular fa-user"></i>
+
+                            </div>
+
+                            <div>
+
+                                <h2>
+                                    Contact Information
+                                </h2>
+
+                                <p>
+                                    We'll use this to send your order updates.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-grid">
+
+                        <div class="form-group">
+
+                            <label>
+                                First Name
+                                <span class="required">*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                class="form-control"
+                                placeholder="Your first name"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>
+                                Last Name
+                                <span class="required">*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                class="form-control"
+                                placeholder="Your last name"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>
+                                Email Address
+                                <span class="required">*</span>
+                            </label>
+
+                            <input
+                                type="email"
+                                class="form-control"
+                                placeholder="you@example.com"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>
+                                Phone Number
+                                <span class="required">*</span>
+                            </label>
+
+                            <input
+                                type="tel"
+                                class="form-control"
+                                placeholder="+91 98765 43210"
+                                required>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="checkbox-row">
+
+                        <input
+                            type="checkbox"
+                            id="updates">
+
+                        <label for="updates">
+                            Keep me updated about new collections,
+                            offers and special promotions.
+                        </label>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- DELIVERY ADDRESS -->
+
+                <section class="checkout-card">
+
+                    <div class="card-heading">
+
+                        <div class="card-heading-left">
+
+                            <div class="heading-icon">
+
+                                <i class="fa-solid fa-location-dot"></i>
+
+                            </div>
+
+                            <div>
+
+                                <h2>
+                                    Delivery Address
+                                </h2>
+
+                                <p>
+                                    Where should we deliver your order?
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="form-grid">
+
+                        <div class="form-group full">
+
+                            <label>
+                                Address
+                                <span class="required">*</span>
+                            </label>
+
+                            <textarea
+                                class="form-control"
+                                placeholder="House number, street, area..."
+                                required></textarea>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>
+                                City
+                                <span class="required">*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                class="form-control"
+                                placeholder="Chennai"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>
+                                State
+                                <span class="required">*</span>
+                            </label>
+
+                            <select
+                                class="form-control"
+                                required>
+
+                                <option value="">
+                                    Select State
+                                </option>
+
+                                <option>
+                                    Tamil Nadu
+                                </option>
+
+                                <option>
+                                    Kerala
+                                </option>
+
+                                <option>
+                                    Karnataka
+                                </option>
+
+                                <option>
+                                    Andhra Pradesh
+                                </option>
+
+                                <option>
+                                    Telangana
+                                </option>
+
+                                <option>
+                                    Maharashtra
+                                </option>
+
+                            </select>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>
+                                Pincode
+                                <span class="required">*</span>
+                            </label>
+
+                            <input
+                                type="text"
+                                class="form-control"
+                                placeholder="600001"
+                                maxlength="6"
+                                required>
+
+                        </div>
+
+
+                        <div class="form-group">
+
+                            <label>
+                                Country
+                            </label>
+
+                            <select class="form-control">
+
+                                <option>
+                                    India
+                                </option>
+
+                            </select>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- DELIVERY METHOD -->
+
+                <section class="checkout-card">
+
+                    <div class="card-heading">
+
+                        <div class="card-heading-left">
+
+                            <div class="heading-icon">
+
+                                <i class="fa-solid fa-truck"></i>
+
+                            </div>
+
+                            <div>
+
+                                <h2>
+                                    Delivery Method
+                                </h2>
+
+                                <p>
+                                    Choose how you'd like to receive your order.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="delivery-options">
+
+
+                        <div class="delivery-option">
+
+                            <input
+                                type="radio"
+                                name="delivery"
+                                id="standard"
+                                checked>
+
+                            <label for="standard">
+
+                                <i class="fa-solid fa-box"></i>
+
+                                <div>
+
+                                    <strong>
+                                        Standard Delivery
+                                    </strong>
+
+                                    <span>
+                                        4–7 business days · Free
+                                    </span>
+
+                                </div>
+
+                            </label>
+
+                        </div>
+
+
+                        <div class="delivery-option">
+
+                            <input
+                                type="radio"
+                                name="delivery"
+                                id="express">
+
+                            <label for="express">
+
+                                <i class="fa-solid fa-bolt"></i>
+
+                                <div>
+
+                                    <strong>
+                                        Express Delivery
+                                    </strong>
+
+                                    <span>
+                                        1–3 business days · ₹149
+                                    </span>
+
+                                </div>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+
+                <!-- PAYMENT -->
+
+                <section class="checkout-card">
+
+                    <div class="card-heading">
+
+                        <div class="card-heading-left">
+
+                            <div class="heading-icon">
+
+                                <i class="fa-regular fa-credit-card"></i>
+
+                            </div>
+
+                            <div>
+
+                                <h2>
+                                    Payment Method
+                                </h2>
+
+                                <p>
+                                    Select your preferred payment option.
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="payment-options">
+
+
+                        <!-- UPI -->
+
+                        <div class="payment-option">
+
+                            <input
+                                type="radio"
+                                name="payment"
+                                id="upi"
+                                checked>
+
+                            <label
+                                for="upi"
+                                class="payment-label">
+
+                                <span class="payment-radio"></span>
+
+                                <span class="payment-icon">
+
+                                    <i class="fa-solid fa-mobile-screen-button"></i>
+
+                                </span>
+
+                                <span class="payment-text">
+
+                                    <strong>
+                                        UPI
+                                    </strong>
+
+                                    <span>
+                                        Google Pay, PhonePe, Paytm and more
+                                    </span>
+
+                                </span>
+
+                            </label>
+
+                        </div>
+
+
+                        <!-- CARD -->
+
+                        <div class="payment-option">
+
+                            <input
+                                type="radio"
+                                name="payment"
+                                id="card">
+
+                            <label
+                                for="card"
+                                class="payment-label">
+
+                                <span class="payment-radio"></span>
+
+                                <span class="payment-icon">
+
+                                    <i class="fa-regular fa-credit-card"></i>
+
+                                </span>
+
+                                <span class="payment-text">
+
+                                    <strong>
+                                        Credit / Debit Card
+                                    </strong>
+
+                                    <span>
+                                        Visa, Mastercard, RuPay and more
+                                    </span>
+
+                                </span>
+
+                            </label>
+
+                        </div>
+
+
+                        <!-- COD -->
+
+                        <div class="payment-option">
+
+                            <input
+                                type="radio"
+                                name="payment"
+                                id="cod">
+
+                            <label
+                                for="cod"
+                                class="payment-label">
+
+                                <span class="payment-radio"></span>
+
+                                <span class="payment-icon">
+
+                                    <i class="fa-solid fa-money-bill"></i>
+
+                                </span>
+
+                                <span class="payment-text">
+
+                                    <strong>
+                                        Cash on Delivery
+                                    </strong>
+
+                                    <span>
+                                        Pay when your order arrives
+                                    </span>
+
+                                </span>
+
+                            </label>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+            </div>
+
+
+
+            <!-- =================================
+                 RIGHT COLUMN
+            ================================== -->
+
+            <aside class="summary-column">
+
+                <div class="summary-card">
+
+
+                    <!-- SUMMARY HEADER -->
+
+                    <div class="summary-header">
+
+                        <h2>
+                            Your Order
+                        </h2>
+
+                        <span>
+                            2 items in your bag
+                        </span>
+
+                    </div>
+
+
+
+                    <!-- PRODUCTS -->
+
+                    <div class="summary-products">
+
+
+                        <!-- PRODUCT 1 -->
+
+                        <div class="summary-product">
+
+                            <div class="product-image">
+
+                                 <img src="https://i.pinimg.com/1200x/6b/bf/99/6bbf99965fc7a1f6ef852238a1d65d96.jpg"
+                            alt="Kanchipuram Wedding Silk Saree">
+
+                                <span class="product-quantity">
+                                    1
+                                </span>
+
+                            </div>
+
+
+                            <div class="product-info">
+
+                                <h3>
+                                    Premium Silk Saree
+                                </h3>
+
+                                <p>
+                                    Traditional Collection
+                                </p>
+
+                            </div>
+
+
+                            <strong class="product-price">
+                                ₹5,499
+                            </strong>
+
+                        </div>
+
+
+
+                        <!-- PRODUCT 2 -->
+
+                        <div class="summary-product">
+
+                            <div class="product-image">
+
+                               <img src="https://i.pinimg.com/1200x/70/55/1f/70551f3761d82cb2456e34be579389fb.jpg"
+                            alt="Royal Kanchipuram Silk Saree">
+
+                                <span class="product-quantity">
+                                    1
+                                </span>
+
+                            </div>
+
+
+                            <div class="product-info">
+
+                                <h3>
+                                    Kanchipuram Silk Saree
+                                </h3>
+
+                                <p>
+                                    Wedding Collection
+                                </p>
+
+                            </div>
+
+
+                            <strong class="product-price">
+                                ₹4,999
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- SUMMARY -->
+
+                    <div class="summary-details">
+
+
+                        <!-- COUPON -->
+
+                        <div class="coupon">
+
+                            <input
+                                type="text"
+                                id="couponInput"
+                                placeholder="Enter coupon code">
+
+                            <button
+                                type="button"
+                                onclick="applyCoupon()">
+
+                                Apply
+
+                            </button>
+
+                        </div>
+
+
+                        <div class="summary-row">
+
+                            <span>
+                                Subtotal
+                            </span>
+
+                            <strong id="subtotal">
+                                ₹10,498
+                            </strong>
+
+                        </div>
+
+
+                        <div class="summary-row">
+
+                            <span>
+                                Delivery
+                            </span>
+
+                            <strong id="shipping">
+                                Free
+                            </strong>
+
+                        </div>
+
+
+                        <div class="summary-row discount">
+
+                            <span>
+                                Discount
+                            </span>
+
+                            <strong id="discount">
+                                − ₹0
+                            </strong>
+
+                        </div>
+
+
+                        <div class="summary-total">
+
+                            <span>
+                                Total
+                            </span>
+
+                            <strong id="total">
+                                ₹10,498
+                            </strong>
+
+                        </div>
+
+
+                        <!-- PLACE ORDER -->
+
+                        <button
+                            type="button"
+                            class="place-order"
+                            onclick="placeOrder()">
+
+                            Place Order
+
+                            <i class="fa-solid fa-arrow-right"></i>
+
+                        </button>
+
+
+                        <div class="secure-message">
+
+                            <i class="fa-solid fa-shield-halved"></i>
+
+                            Secure and encrypted checkout
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- TRUST -->
+
+                    <div class="trust-features">
+
+                        <div class="trust-item">
+
+                            <i class="fa-solid fa-lock"></i>
+
+                            Secure
+                            Payment
+
+                        </div>
+
+
+                        <div class="trust-item">
+
+                            <i class="fa-solid fa-rotate-left"></i>
+
+                            Easy
+                            Returns
+
+                        </div>
+
+
+                        <div class="trust-item">
+
+                            <i class="fa-solid fa-headset"></i>
+
+                            Customer
+                            Support
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <a
+                    href="catalog.html"
+                    class="back-shop">
+
+                    <i class="fa-solid fa-arrow-left"></i>
+
+                    Continue Shopping
+
+                </a>
+
+            </aside>
+
+        </div>
+
+    </main>
+
+
+
+    <!-- =========================================
+         SUCCESS OVERLAY
+    ========================================= -->
+
+    <div
+        class="success-overlay"
+        id="successOverlay">
+
+        <div class="success-box">
+
+            <div class="success-icon">
+
+                <i class="fa-solid fa-check"></i>
+
+            </div>
+
+            <h2>
+                Order Confirmed
+            </h2>
+
+            <p>
+                Thank you for shopping with AVENZA.
+                Your order has been successfully placed.
+                A confirmation will be sent to your email.
+            </p>
+
+            <button
+                class="success-close"
+                onclick="closeSuccess()">
+
+                Continue Shopping
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <script 
+        let subtotal = 10,498;
+
+        let discount = 0;
+
+        let shipping = 0;>
+
+
+        const subtotalElement =
+            document.getElementById("subtotal");
+
+        const shippingElement =
+            document.getElementById("shipping");
+
+        const discountElement =
+            document.getElementById("discount");
+
+        const totalElement =
+            document.getElementById("total");
+
+
+        const standardDelivery =
+            document.getElementById("standard");
+
+        const expressDelivery =
+            document.getElementById("express");
+
+
+        /* =====================================
+           UPDATE TOTAL
+        ===================================== */
+
+        function updateTotal() {
+
+            const total =
+                subtotal +
+                shipping -
+                discount;
+
+            subtotalElement.textContent =
+                "₹" + subtotal.toLocaleString("en-IN");
+
+            discountElement.textContent =
+                "− ₹" + discount.toLocaleString("en-IN");
+
+            if (shipping === 0) {
+
+                shippingElement.textContent =
+                    "Free";
+
+            } else {
+
+                shippingElement.textContent =
+                    "₹" + shipping.toLocaleString("en-IN");
+
+            }
+
+            totalElement.textContent =
+                "₹" + total.toLocaleString("en-IN");
+        }
+
+
+        /* =====================================
+           DELIVERY CHANGE
+        ===================================== */
+
+        standardDelivery.addEventListener(
+            "change",
+            function () {
+
+                if (this.checked) {
+
+                    shipping = 0;
+
+                    updateTotal();
+
+                }
+
+            }
+        );
+
+
+        expressDelivery.addEventListener(
+            "change",
+            function () {
+
+                if (this.checked) {
+
+                    shipping = 149;
+
+                    updateTotal();
+
+                }
+
+            }
+        );
+
+
+        /* =====================================
+           COUPON
+        ===================================== */
+
+        function applyCoupon() {
+
+            const coupon =
+                document
+                    .getElementById("couponInput")
+                    .value
+                    .trim()
+                    .toUpperCase();
+
+
+            if (coupon === "WELCOME10") {
+
+                discount =
+                    Math.round(subtotal * 0.10);
+
+                updateTotal();
+
+                alert(
+                    "Coupon applied successfully!"
+                );
+
+            } else if (coupon === "") {
+
+                alert(
+                    "Please enter a coupon code."
+                );
+
+            } else {
+
+                alert(
+                    "Invalid coupon code."
+                );
+
+            }
+
+        }
+
+
+        /* =====================================
+           PLACE ORDER
+        ===================================== */
+
+        function placeOrder() {
+
+            const requiredFields =
+                document.querySelectorAll(
+                    "input[required], textarea[required], select[required]"
+                );
+
+
+            let valid = true;
+
+
+            requiredFields.forEach(
+                function (field) {
+
+                    if (!field.value.trim()) {
+
+                        valid = false;
+
+                        field.focus();
+
+                    }
+
+                }
+            );
+
+
+            if (!valid) {
+
+                alert(
+                    "Please complete all required details."
+                );
+
+                return;
+            }
+
+
+            document
+                .getElementById("successOverlay")
+                .classList.add("active");
+
+
+            document.body.style.overflow =
+                "hidden";
+
+        }
+
+
+        /* =====================================
+           CLOSE SUCCESS
+        ===================================== */
+
+        function closeSuccess() {
+
+            document
+                .getElementById("successOverlay")
+                .classList.remove("active");
+
+            document.body.style.overflow =
+                "";
+
+        }
+
+
+        /* =====================================
+           ESCAPE
+        ===================================== */
+
+        document.addEventListener(
+            "keydown",
+            function (event) {
+
+                if (
+                    event.key === "Escape"
+                ) {
+
+                    closeSuccess();
+
+                }
+
+            }
+        );
+
+
+        /* =====================================
+           INITIAL TOTAL
+        ===================================== */
+
+        updateTotal();
+
+    </script>
+
+
+
+
+
+
+    <!-- =========================================================
+     TRUST SECTION
+========================================================= -->
+
+    <section class="trust-section">
+
+        <div class="container">
+
+            <div class="trust-grid">
+
+                <div class="trust-card">
+
+                    <i class="fa-solid fa-truck-fast"></i>
+
+                    <h3>Free Shipping</h3>
+
+                    <p>
+                        Complimentary delivery on qualifying orders.
+                    </p>
+
+                </div>
+
+
+                <div class="trust-card">
+
+                    <i class="fa-solid fa-shield-heart"></i>
+
+                    <h3>Quality Assured</h3>
+
+                    <p>
+                        Carefully selected fabrics and authentic weaves.
+                    </p>
+
+                </div>
+
+
+                <div class="trust-card">
+
+                    <i class="fa-solid fa-box-open"></i>
+
+                    <h3>Elegant Packaging</h3>
+
+                    <p>
+                        Every saree arrives beautifully wrapped.
+                    </p>
+
+                </div>
+
+
+                <div class="trust-card">
+
+                    <i class="fa-solid fa-headset"></i>
+
+                    <h3>Personal Assistance</h3>
+
+                    <p>
+                        Our team is here to help you choose.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================================================
+     FOOTER
+========================================================= -->
+
+    <footer>
+
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div class="footer-brand">
+
+                    <h2>AVENZA </h2>
+
+                    <p>
+                        A contemporary textile destination celebrating
+                        India's timeless weaving traditions through
+                        carefully curated sarees.
+                    </p>
+
+                 <div class="socials">
+
+                        <a href="https://www.Instagram.com">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+
+                        <a href="https://www.Facebook.com">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+
+                        <a href="https://www.Pinterest.com">
+                            <i class="fa-brands fa-pinterest-p"></i>
+                        </a>
+
+                        <a href="https://www.WhatsApp.com">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h4>Shop</h4>
+
+                    <a href="#">Silk Sarees</a>
+                    <a href="#">Cotton Sarees</a>
+                    <a href="#">Banarasi Sarees</a>
+                    <a href="#">Party Wear</a>
+                    <a href="#">Wedding Collection</a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h4>Information</h4>
+
+                    <a href="about.html">About Us</a>
+                    <a href="checkout.html">Shipping Policy</a>
+                    <a href="#">Returns</a>
+                    <a href="#">Privacy Policy</a>
+                    <a href="contact.html">Contact Us</a>
+
+                </div>
+
+
+                <div class="footer-column">
+
+                    <h4>Visit Us</h4>
+
+                    <p>
+                        24 Heritage Street,<br>
+                        Textile Market,<br>
+                        Chennai, Tamil Nadu
+                    </p>
+
+                    <p style="margin-top:12px;">
+                        +91 98765 43210
+                    </p>
+
+                    <p>
+                        hello@auratextiles.com
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="copyright">
+
+                © 2026 AVENZA TEXTILES.
+                Crafted with respect for Indian textile traditions.
+
+            </div>
+
+        </div>
+
+    </footer>
+<script>
+
+
+        /* =========================================================
+           MOBILE NAVBAR
+        ========================================================= */
+
+        function toggleMenu() {
+
+            const menu =
+                document.getElementById("mobileNav");
+
+            const menuBtn =
+                document.getElementById("menuBtn");
+
+            const icon =
+                menuBtn.querySelector("i");
+
+
+            menu.classList.toggle("show");
+
+
+            const isOpen =
+                menu.classList.contains("show");
+
+
+            menuBtn.setAttribute(
+                "aria-expanded",
+                isOpen
+            );
+
+
+            if (isOpen) {
+
+                icon.classList.remove(
+                    "fa-bars"
+                );
+
+                icon.classList.add(
+                    "fa-xmark"
+                );
+
+                menuBtn.setAttribute(
+                    "aria-label",
+                    "Close menu"
+                );
+
+            } else {
+
+                icon.classList.remove(
+                    "fa-xmark"
+                );
+
+                icon.classList.add(
+                    "fa-bars"
+                );
+
+                menuBtn.setAttribute(
+                    "aria-label",
+                    "Open menu"
+                );
+
+            }
+
+        }
+
+
+        /* =========================================================
+           CLOSE MOBILE MENU AFTER LINK CLICK
+        ========================================================= */
+
+        document
+            .querySelectorAll("#mobileNav a")
+            .forEach(function (link) {
+
+                link.addEventListener(
+                    "click",
+                    function () {
+
+                        closeMobileMenu();
+
+                    }
+                );
+
+            });
+
+
+        /* =========================================================
+           CLOSE MOBILE MENU
+        ========================================================= */
+
+        function closeMobileMenu() {
+
+            const menu =
+                document.getElementById("mobileNav");
+
+            const menuBtn =
+                document.getElementById("menuBtn");
+
+            const icon =
+                menuBtn.querySelector("i");
+
+
+            menu.classList.remove("show");
+
+
+            menuBtn.setAttribute(
+                "aria-expanded",
+                "false"
+            );
+
+
+            menuBtn.setAttribute(
+                "aria-label",
+                "Open menu"
+            );
+
+
+            icon.classList.remove(
+                "fa-xmark"
+            );
+
+            icon.classList.add(
+                "fa-bars"
+            );
+
+        }
+
+
+        /* =========================================================
+           CLICK OUTSIDE MOBILE MENU
+        ========================================================= */
+
+        document.addEventListener(
+            "click",
+            function (event) {
+
+                const menu =
+                    document.getElementById("mobileNav");
+
+                const menuBtn =
+                    document.getElementById("menuBtn");
+
+
+                if (!menu || !menuBtn) {
+                    return;
+                }
+
+
+                if (
+                    menu.classList.contains("show") &&
+                    !menu.contains(event.target) &&
+                    !menuBtn.contains(event.target)
+                ) {
+
+                    closeMobileMenu();
+
+                }
+
+            }
+        );
+
+
+        /* =========================================================
+           CLOSE MENU ON DESKTOP
+        ========================================================= */
+
+        window.addEventListener(
+            "resize",
+            function () {
+
+                if (window.innerWidth > 780) {
+
+                    closeMobileMenu();
+
+                }
+
+            }
+        );
+
+
+        /* =========================================================
+           QUICK VIEW
+        ========================================================= */
+
+        function openQuickView(
+            image,
+            name,
+            category,
+            price,
+            description
+        ) {
+
+
+            const modal =
+                document.getElementById(
+                    "quickViewModal"
+                );
+
+
+            document.getElementById(
+                "quickViewImage"
+            ).src = image;
+
+
+            document.getElementById(
+                "quickViewImage"
+            ).alt = name;
+
+
+            document.getElementById(
+                "quickViewName"
+            ).textContent = name;
+
+
+            document.getElementById(
+                "quickViewCategory"
+            ).textContent = category;
+
+
+            document.getElementById(
+                "quickViewPrice"
+            ).textContent = price;
+
+
+            document.getElementById(
+                "quickViewDescription"
+            ).textContent = description;
+
+
+            modal.classList.add("show");
+
+
+            document.body.style.overflow =
+                "hidden";
+
+        }
+
+
+        /* =========================================================
+           CLOSE QUICK VIEW
+        ========================================================= */
+
+        function closeQuickView() {
+
+            const modal =
+                document.getElementById(
+                    "quickViewModal"
+                );
+
+
+            modal.classList.remove("show");
+
+
+            document.body.style.overflow =
+                "";
+
+        }
+
+
+        /* =========================================================
+           CLICK OUTSIDE QUICK VIEW
+        ========================================================= */
+
+        document
+            .getElementById("quickViewModal")
+            .addEventListener(
+                "click",
+                function (event) {
+
+                    if (
+                        event.target === this
+                    ) {
+
+                        closeQuickView();
+
+                    }
+
+                }
+            );
+
+
+        /* =========================================================
+           ESCAPE KEY
+        ========================================================= */
+
+        document.addEventListener(
+            "keydown",
+            function (event) {
+
+                if (
+                    event.key === "Escape"
+                ) {
+
+                    closeQuickView();
+
+                }
+
+            }
+        );
+
+
+        /* =========================================================
+           QUICK VIEW CART
+        ========================================================= */
+
+        function quickViewAddToCart() {
+
+            showToast(
+                "Product added to cart"
+            );
+
+        }
+
+
+        /* =========================================================
+           QUICK VIEW WISHLIST
+        ========================================================= */
+
+        function quickViewWishlist() {
+
+            showToast(
+                "Added to wishlist"
+            );
+
+        }
+
+
+        /* =========================================================
+           WISHLIST BUTTON
+        ========================================================= */
+
+        function toggleWishlist(button) {
+
+            button.classList.toggle(
+                "active"
+            );
+
+
+            const icon =
+                button.querySelector("i");
+
+
+            if (
+                button.classList.contains(
+                    "active"
+                )
+            ) {
+
+                icon.classList.remove(
+                    "fa-regular"
+                );
+
+                icon.classList.add(
+                    "fa-solid"
+                );
+
+                showToast(
+                    "Added to wishlist"
+                );
+
+            } else {
+
+                icon.classList.remove(
+                    "fa-solid"
+                );
+
+                icon.classList.add(
+                    "fa-regular"
+                );
+
+                showToast(
+                    "Removed from wishlist"
+                );
+
+            }
+
+        }
+
+
+        /* =========================================================
+           TOAST
+        ========================================================= */
+
+        function showToast(message) {
+
+            const toast =
+                document.getElementById(
+                    "toast"
+                );
+
+
+            toast.textContent =
+                message;
+
+
+            toast.classList.add(
+                "show"
+            );
+
+
+            setTimeout(
+                function () {
+
+                    toast.classList.remove(
+                        "show"
+                    );
+
+                },
+                2200
+            );
+
+        }
+
+
+        /* =========================================================
+           OWL CAROUSEL
+        ========================================================= */
+
+        $(document).ready(function () {
+
+
+            /* NEW ARRIVALS */
+
+            $(".new-arrivals-carousel").owlCarousel({
+
+                loop: true,
+
+                margin: 18,
+
+                nav: true,
+
+                dots: true,
+
+                autoplay: true,
+
+                autoplayTimeout: 4500,
+
+                autoplayHoverPause: true,
+
+                responsive: {
+
+                    0: {
+                        items: 1
+                    },
+
+                    576: {
+                        items: 2
+                    },
+
+                    992: {
+                        items: 3
+                    },
+
+                    1200: {
+                        items: 4
+                    }
+
+                }
+
+            });
+
+
+            /* BEST SELLING */
+
+            $(".best-selling-carousel").owlCarousel({
+
+                loop: true,
+
+                margin: 18,
+
+                nav: true,
+
+                dots: true,
+
+                autoplay: true,
+
+                autoplayTimeout: 4500,
+
+                autoplayHoverPause: true,
+
+                responsive: {
+
+                    0: {
+                        items: 1
+                    },
+
+                    576: {
+                        items: 2
+                    },
+
+                    992: {
+                        items: 3
+                    },
+
+                    1200: {
+                        items: 4
+                    }
+
+                }
+
+            });
+
+
+        });
+
+    </script>
+
+</body>
+
+</html>
+
