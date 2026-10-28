@@ -2,6 +2,7 @@
 ### Timeless Indian Craft. Sarees That Speak.
 
 Discover the beauty of Indian tradition with **AVENZA TEXTILES** — a curated saree collection that celebrates timeless craftsmanship, luxurious fabrics, and exquisite traditional details. Every saree reflects elegance, culture, and the artistry of Indian textiles.
+**project link  https://avenzatextile.netlify.app/**
 
 ---
 
